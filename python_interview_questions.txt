@@ -1,0 +1,155 @@
+Q1) what is the difference between is operator and == operator ?
+Ans) is operator meant for reference comparison and object comparison i.e., if two reference variable are pointing to same object then is operator retruns True.
+	 == operator meant for content comparison i.e., if two variable have exact content then == operator returns True.
+
+Q2) Explain about ternary or conditional operator ?
+Ans) x = first_value if condition else second_value
+	if condition is True then first value will return, otherwise if condition is false then second value will return.
+
+Q3) What are the various in-built data types available in python ?
+Ans) The 1st five are fundamental data types.
+	1. int
+	2. float
+	3. complex
+	4. str
+	5. bool
+	6. list
+	7. tuple
+	8. set
+	9. dict
+	10. frozenset
+	11. bytes
+	12. bytearray
+	13. range
+
+Q4) Explain mutability and immutability ?
+Ans) Mutable = content can change i.e., those objects which are allowed to change its content. For example: list, set, dict, bytearray.
+	 Immutalbe = content can't change i.e., those object which are not allowed to change its content. For example: int, float, complex, str, bool, fromzenset, bytes, range.
+
+Q5) Difference between list and tuple ?
+Ans)
+	List: -
+	1. It is a group of comma seperated values within square brackets and square brackets are mandetory
+		   For example: l = [10,20,30,40,50]
+	2. It is mutable.
+	3. List object require more memory.
+		   For example: -
+		   import sys
+		   l = [10,20,30,40,50,60,70,80,90,100]
+		   print('The size of list:',sys.getsizeof(l))	#output: The size of list: 136
+	4. List objects are not reusable i.e., new address will be created for new object.
+	5. Low performance i.e., operation on list object require more time.
+	6. Comperhension is applicable.
+	7. Unhashable type and hence we can't store in set or in dict as keys.
+		   For example: -
+		   s = {10,20,30,[40,50]}	#TypeError: unhashable type: 'list'
+		   s = {[10,20]:'durga'}	#TypeErroe: unhashable type: 'list'
+
+	Tuple: -
+	1. It is a group of comma separated value within paranthesis and paranthesis are optional.
+		   For example: t = (10,20,30,40,50)
+		                t = 10,20,30,40,50
+	2. It is immutable.
+	3. Tuple object require less memory.
+		   For example: -
+		   import sys
+		   l = (10,20,30,40,50,60,70,80,90,100)
+		   print('The size of tuple:',sys.getsizeof(l))	#output: The size of tuple: 120
+	4. Tuple objects are reusable i.e., old address will be created if the new object's content is same.
+	5. High performance i.e., operation on tuple object require less time.
+	6. Comprehension is not applicable.
+	7. Hashable type and hence we can store in set or in dict as keys.
+		   For example: -
+		   s = {10,20,30,(40,50)}	#valid
+		   s = {(10,20):'durga'}	#valid
+
+Q6) What is the difference between set and frozenset ?
+Ans) All properties of set and frozenset are same except one difference i.e., set is mutable and frozenset is immutable.
+
+Q7) What is the difference between list and dict ?
+Ans)
+	List: -
+	1. It is a group of comma seperated values within square brackets.
+	2. Insertion order is preserved.
+	3. Duplication is allowed.
+	4. Access values by using index.
+	5. It is not hashable.
+	6. Indexing is applicable.
+
+	Dict: -
+	1. It is a group of comma seperated key-value pairs within curly brackets.
+	2. Insertion order is not preserved because all key-valye pairs are stored on basis of hashcode of keys. But from 3.7 version ownwards, the dict functionality internally replaced withordered dict functionality.
+	3. Duplication of keys are not allowed, but duplication of values are allowed. If we try to add duplicate key-value pair then old value will replaced with new value.
+	4. Access values by using keys.
+	5. Keys are hashable.
+	6. Indexing is not applicable.
+
+Q8) What is the diffrence between list and set ?
+Ans)
+	List: -
+	1. It is a group of comma seperated values within square brackets.
+	2. Duplicate values are allowed.
+	3. Insertion order is preserved.
+	4. It is not hashable.
+	5. Indexing and slicing concepts is applicable.
+	
+	Set: -
+	1. It is a group of comma seperated values within curly brakets.
+	2. Duplication values are not allowed.
+	3. Insertion order is not preserved because values are inserted on based of hashcode.
+	4. It is hashable.
+	5. Indexing and slicing concepts is not applicable.
+
+Q9) What is slice operator and its syntax ?
+Ans) If we want to access part of a given sequence, then we should go for slice operator. The sequence can be string, list, tuple, etc.
+
+	 Syntax: -
+	 ------
+	 sequence_variable[begin : end-1 : step]
+	 Value of step can be -ve or +ve but not zero. If value of step is +ve then the sequence will be from begin to end-1 index. If value of step is -ve then sequence will be from end-1 to begin index.
+
+Q10) How to reverse a string using slice operator ?
+Ans) s = 'abcdefgh'
+	 s1 = s[::-1]	#Reverse string syntax
+	 print('Reverse string:',s1)
+
+Q11) What is the difference between *args and **kargs ?
+Ans) *args ---> Variable length arguments. We can call this function by passing number of values or without passing any values. With those values a tuple will be created.
+	 **kargs ---> Variable length keyword arguments. We call this function by passing number of keyword argument or without passing any argument. With those values a dictionary will be created.
+
+Q12) What is the difference between dir() and help() function ?
+Ans) dir() ---> It is a function, with argument it will list out all members of given module. Without argument it will list out all members of current module.
+	 help() ---> It is a function, with argument it will provides documentation related to that module. Without argument it will list out all documentation of current module.
+
+Q13) What is lambda function or anonymous function ?
+Ans) We can declare function without name such type of nameless function are called anonymous function or lambda functions. We can write concise code.
+
+	 Syntax: -
+	 ------
+	 variable_name = lambda argument_list: expression
+
+	 Example: -
+	 a = lambda n: n*n
+	 print('Square of 2 is',a(2))	#Square of 2 is 4
+
+Q14) What is the difference between normal function and lambda function ?
+Ans)
+	Normal function: -
+	1. It is a named function and we can define it using def keyword.
+	2. We have to write return statement explicitly to return some values.
+	3. It is multiple time usage.
+	4. Length of code is more and hence readability is reduced.
+
+	Lambda function: -
+	1. It is a nameless function and we can define it using lambda keyword.
+	2. It has internally return statement to return some values.
+	3. It is one time usage.
+	4. Length of code is less and hence readability is more.
+
+Q15) Explain filter() function ?
+Ans) We can use filter() function to filter values from the given sequence based on some condition.
+	 Syntax: filter(function_name, sequence)
+	 Here, argument of function_name is boolean valued function which perform conditional check. Argument of sequence is applied on function and if it returns True then it returns result. The function can be normal function / lambda function.
+
+Q16) Explain about map() and reduce() function ?
+Q17) Explain about decorator and generator function ?

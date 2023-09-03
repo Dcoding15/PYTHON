@@ -174,6 +174,7 @@ Method Resolution Order (MRO): -
 	2. It is an in-built function.
 	3. It uses MRO algorithm which is also known as C3 algorithm.
 '''
+'''
 class A:
 	pass
 class B(A):
@@ -186,4 +187,71 @@ print("Class A:",A.mro())
 print("Class B:",B.mro())
 print("Class C:",C.mro())
 print("Class D:",D.mro())
+'''
 
+'''
+super(): -
+-------
+	1. It is an built-in function to call parent class memberes expicitly from child class. 
+	2. If parent and child class has member with same name then super() is required to avoid naming conflict.
+    3. super(class_name,self).method_name() ===> It will call method_name() of parent class of class_name into current object.
+    4. We can't access parent class instance variable. We can access by self variable only.
+    5. Under one object one instance vairable possible with same name.
+		Example: -
+		-------
+		class A:
+			def __init__(self):
+				self.a = 10
+
+		class B(A):
+			def __init__(self):
+				self.a = 100
+				super().__init__()		#Here value of instance variable a is change to 10
+			def m1(self):
+				print(self.a)
+
+		b = B()
+		b.m1()							#Output: 10
+    6. From instance method of child class by using super() we can call parent class --> constructor, instance method, class method, static method.
+	   From class method of child class by using super() we can call parent class --> class method, static method.
+       From static method of child class by using super() we can't call parent class members.
+    7. Indirectly calling parent class --> constructor, instance method from child class using super()
+		Example: -
+        -------
+        class A:
+			def __init__(self):
+			print("Class A contructor.")
+			print('constructor self address: ',id(self))
+		def m1(self):
+			print("Class A instance method.")
+			print('instance method self address: ',id(self))
+		
+        class B(A):
+			@classmethod
+			def m1(cls):
+				super(B,cls).__init__(cls)
+				super(B,cls).m1(cls)
+				print('cls address: ',id(cls))
+		
+        B.m1()
+										#Output: -
+										#Class A contructor.
+										#constructor self address:  20046000
+										#Class A instance method.
+										#instance method self address:  20046000
+										#cls address:  20046000
+    8. Indirectly calling parent class --> static method from child class using super()
+		Example: -
+        -------
+        class A:
+			@staticmethod
+			def m1():
+				print('Class A static method')
+		class B(A):
+			@staticmethod
+				def m2():
+				super(B,B).m1()
+		B.m2()
+										#Output: -
+                                        #Class A static method
+'''

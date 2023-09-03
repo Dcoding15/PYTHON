@@ -23,9 +23,19 @@ Polymorphism: -
 
                 Note: We have to explicitly overiding operator using dunder or magic method at time of using objects.
 
-            ii) Method overloading
-            iii) Constructor overloading
+            ii) Method overloading: -
+				------------------
+				Two or more methods are said to be overloaded iff methods having same name but different parameters. But in python method overloading is not applicable. If we are trying to declare multiple method with same name then PVM will consider the latest one.
+
+            iii) Constructor overloading: -
+				 -----------------------
+				 Same of method overloading . . .
+
         (b) Overrinding
-            i) Method overriding
-            ii) Constructor overriding
+            i) Method overriding: -
+			   -----------------
+			   When child class have method of same name as parent class but have different definition.
+
+            ii) Constructor overriding: -
+				----------------------
 '''

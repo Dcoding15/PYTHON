@@ -34,8 +34,29 @@ Polymorphism: -
         (b) Overrinding
             i) Method overriding: -
 			   -----------------
-			   When child class have method of same name as parent class but have different definition.
+			   Child class have method of same name as parent class but have different definition.
+			   Example: -
+			   class A:
+					def m1():
+						print('This is class A method . . .')
+
+				class B(A):
+					def m1():		#Here method m1() from class A have been override.
+						print('This is class B method . . .')
+
+				B.m1()
 
             ii) Constructor overriding: -
 				----------------------
+				Child class constructor overrides the property of parent constructor.
+				Example: -
+				class A:
+	def __init__(self):
+		print('This is class A contructor . . .')
+
+class B(A):
+	def __init__(self):		#Here method __init__() from class A have been override.
+		print('This is class B constructor . . .')
+
+b=B()
 '''

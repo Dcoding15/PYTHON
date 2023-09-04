@@ -15,7 +15,7 @@ Polymorphism: -
                 ----------
                     10 + 20       ===> Addition
                     'abc' + 'def' ===> String Concatenation
-                
+
                 * operator: -
                 ----------
                     10 * 20        ===> Multiplication

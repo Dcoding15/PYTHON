@@ -6,7 +6,7 @@ Polymorphism: -
 
     1. Poly means many and morphism means form. It means one thing have the ability to display many form.
     2. There are two types of polymophism: -
-        (a) Overloading
+        (a) Overloading (also called compile time polymorphism / static binding)
             i)  Operator overloading: -
                 --------------------
                 Same operator but different purposes.
@@ -21,7 +21,7 @@ Polymorphism: -
                     10 * 20        ===> Multiplication
                     'abc' * 10     ===> String Multiplication
 
-                Note: We have to explicitly overiding operator using dunder or magic method at time of using objects.
+                Note: We can explicitly overiding operator using dunder or magic method at time of using objects.
 
             ii) Method overloading: -
 				------------------
@@ -30,8 +30,9 @@ Polymorphism: -
             iii) Constructor overloading: -
 				 -----------------------
 				 Same of method overloading . . .
+	Note: Overloading concept is not applicable for python
 
-        (b) Overrinding
+        (b) Overrinding (also called run time polymorphism / dynamic binding)
             i) Method overriding: -
 			   -----------------
 			   Child class have method of same name as parent class but have different definition.

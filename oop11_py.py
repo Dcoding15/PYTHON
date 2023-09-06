@@ -41,5 +41,6 @@ Encapsulation: -
 	
 	Interface: -
 	---------
-		1.
+		1. It is not applicable directly in python
+		2. We can apply interface concept in python only fully using abstract method and abstract class.
 '''

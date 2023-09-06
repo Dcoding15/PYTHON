@@ -51,12 +51,12 @@ Polymorphism: -
 				Child class constructor overrides the property of parent constructor.
 				Example: -
 				class A:
-	def __init__(self):
-		print('This is class A contructor . . .')
+					def __init__(self):
+						print('This is class A contructor . . .')
 
-class B(A):
-	def __init__(self):		#Here method __init__() from class A have been override.
-		print('This is class B constructor . . .')
+				class B(A):
+					def __init__(self):		#Here method __init__() from class A have been override.
+						print('This is class B constructor . . .')
 
-b=B()
+				b=B()
 '''

@@ -3,6 +3,8 @@ Class: It acts as a plan /  model / blue print / design for objects.
 Object: A physical existence of a class.
 Reference Variable: It can be used to refer objects and can invoke functionalities of objects. We can create multiple reference variable for a single object.
 
+Note: In python everything is treated as object.
+
 class name_of_class:
 	Documentation string quoted with triple single/double quotes.
 	properties (variables)

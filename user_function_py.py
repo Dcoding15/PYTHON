@@ -18,6 +18,7 @@ Note: -
 	(5) We can put default argument both before and after the variable length argument.
 	(6) We can take atmost one variable length argument.
 	(7) Key=value pair argument should be last argument,
+	(8) Default return value of function is None.
 
 """
 
@@ -179,5 +180,78 @@ b1 = filter(a1,l)
 b2 = filter(a2,l)
 print(list(b1))					#[0, 2, 4, 6, 8]
 print(list(b2))					#[1, 3, 5, 7, 9]
+
+'''
+
+'''
+
+# Function Aliasing
+
+For existing function we can give another name.
+
+Example:-
+def sms(msg):
+	print(msg)
+
+sms1 = sms		#sms1 is pointing address of sms
+
+sms1('Hello')	#Output: Hello
+
+'''
+
+'''
+
+# Nested Function
+
+Function inside another function. Inner function is local to outer function.
+
+Example:-
+def fun1():
+    print('This is outer function.')
+    def fun2():
+        print('This is inner function.')
+    fun2()	            #calling inner function
+fun1()                  #calling outer function
+
+Output: -
+This is outer function.
+This is inner function.
+
+'''
+
+'''
+
+# Function can return value as another function
+
+Note: Assigning function to a variable makes the variable also a function.
+
+Example:-
+def fun1():
+    print('This is outer function.')
+    def fun2():
+        print('This is inner function.')
+	return fun2         #returning function
+x = fun1()					#assigning value of fun1() i.e., fun()
+x()							#calling the assigned function
+
+Output: -
+This is outer function.
+This is inner function.
+
+'''
+
+'''
+
+# Function passing as argument to another function
+
+Example:-
+def fun(x):
+    print(x())
+
+def f1():
+    return 'This is f1 function.'
+
+fun(f1)         #passing f1() as argument
+                #f1() and parameter of fun() i.e., x are pointing to same address
 
 '''

@@ -257,3 +257,11 @@ def fun(s):
 # It return a copy of a string after removing the suffix_string (starting from right side of string).
 #print('iamprogrammer'.removesuffix('programmer'))
 # Output: iam
+
+'''
+Note: -
+	1. By using str(), we can convert the given object into string but reverse is not possible.
+	2. By using repr(), we can convert the given object into string and reverse is also possible.
+	3. By using __repr__() returns the official string representation, which is aimed at programmers as they develop and maintain a program.
+	4. By using __str__() returns the informal string representation, a friendlier format for the program's user.
+'''

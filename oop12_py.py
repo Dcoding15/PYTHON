@@ -3,6 +3,7 @@
 '''
 Encapsulation: -
 -------------
+The process of binding the data and methods into single unit is called Encapsulation. If any data or method hides then those data or methods are called encapsulated componentes.
 
 	Abstract method: -
 	---------------

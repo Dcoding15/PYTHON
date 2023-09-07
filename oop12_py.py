@@ -48,28 +48,25 @@ Public, Private and Protected member: -
 			def _fun1():				#protected method
 				print('This is class A')
 	
-Data Hiding: -
------------
-	1. It refers to hide implementation details of a class from other class.
+Data Hiding / Abstraction: -
+-------------------------
+	1. It refers to hide data of a class from other class. Hiding internal implementation is abstraction.
 	2. Access limited to same class.
 	3. Implentation by using private members.
 	Example:-
 	-------
 	class Circle:
         def __init__(self,r):
-                self.PI = 3.14159265359
+                self.PI = 3.14159265359		#Example of data hiding
                 self.r = r
-        def __area(self):
+        def __area(self):					#Example of hiding internal implementaion
                 return self.PI*(self.r**2)
-        def __perimeter(self):
+        def __perimeter(self):				#Example of hiding internal implementaion
                 return 2*self.PI*self.r
         def display(self):
                 print(f'Area of Circle:     {self.__area()} cm*cm')
                 print(f'Boundary of Circle: {self.__perimeter()} cm')
 	radis = int(input('Enter radius (in cm): '))
 	Circle(radis).display()
-
-Abstraction: -
------------
-	1. 
-'''
+	
+	'''

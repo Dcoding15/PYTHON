@@ -1,46 +1,49 @@
 #! /usr/bin/python3
 '''
-Encapsulation: -
--------------
-
-	Abstract method: -
-	---------------
-		1. It is a method that is only decalared but not implemented by itself. It forces child class for implementation.
-		2. It can be declared using @abstractmethod decorator which is imported from abc module.
+Public, Private and Protected member: -
+------------------------------------
+	1. Public members: -
+	   --------------
+			(i) Those members which can be access either within the class or outside the class.
+			(ii) Everybody inside the class are bydefault public.
 		Example:-
 		-------
-		from abc import abstractmethod
 		class A:
-			@abstractmethod
-			def fun1():		#This is declaration of abstract method
-				pass
-		class B(A):
-			def fun1():
-				print('This is an example of abstract method . . .')
-		B.fun1()
+			def __init__(self):
+				self.a = 10			#public variable
+			def fun1(self):			#public method
+				print('This is class A')
 
-	Abstract class: -
-	--------------
-		1. Partial implementation of class is known as abstract class.
-		2. It can be declared using ABC (Abstract Base Class) class which is parent class of all  from abc module
-		3. We can create object for abstract class if abstract method is not present and vice versa.
-		4. It can contain zero number of abstract methods.
-		5. We can call abstract method only by class name.
-		6. It can contain both abstract and non-abstract methods.
+	2. Private members: -
+	   ---------------
+			(i) Those members which can be access only within the class.
+			(ii) We can declare them by using double underscore as name prefix.
+			(iii) We can't access private members normally by only creating an object. We have to use objectName._className__privateVariableName and objectName._className__privateMethodName()
 		Example:-
 		-------
-		from abc import abstractmethod,ABC
-		class A(ABC):			#This is declaration of abstract class
-			@abstractmethod		#This is declaration of abstract method
-			def fun1():
-				pass
-		class B(A):
-			def fun1():
-				print('This is an example of abstract class and method . . .')
-		B.fun1()
-	
-	Interface: -
-	---------
-		1. It is not applicable directly in python
-		2. We can apply interface concept in python only fully using abstract method and abstract class.
+		class A:
+			def __init__(self):
+				self.__a = 10			#private variable
+			def __fun1(self):			#private method
+				print('This is class A')
+			def display(self):
+				print(self.__a)
+				self.__fun1()
+
+		print(A()._A__a)
+		A()._A__fun1()
+
+	3. Protected members: -
+	   -----------------
+	   		(i) Those member which can be access only within the same class and child class.
+			(ii) We can declare them by using single underscore as name prefix.
+			(iii) We can't access protected member by other python file.
+		Note: It is not implemented in python.
+		Example:-
+		-------
+		class A:
+			def __init__(self):
+				self._a = 10			#protected variable
+			def _fun1():				#protected method
+				print('This is class A')
 '''

@@ -24,4 +24,44 @@ Decorator: -
 	Output: -
 	This is an example of decorator.
 	This is f1()
+
+Chain Decorator: -
+---------------
+	1. Calling two or more decorator one after another.
+	Example:-
+	def deco1(x):
+		def fun1():
+			print('This is decorator 1')
+			x()
+		return fun1
+	def deco2():
+		def fun2(x):
+			print('This is decorator 2')
+			x()
+		return fun2
+	def deco3(x):
+		def fun3():
+			print('This is decorator 3')
+			x()
+		return fun3
+	def deco4(x):
+		def fun4():
+			print('This is decorator 4')
+			x()
+		return fun4
+	
+	@deco1
+	@deco2
+	@deco3
+	@deco4
+	def msg():
+		pass
+	
+	msg()
+
+	Output: -
+	This is decorator 1
+	This is decorator 2
+	This is decorator 3
+	This is decorator 4
 '''

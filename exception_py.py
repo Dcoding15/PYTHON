@@ -42,16 +42,18 @@ finally:					#finally outer block
 	#statement-7
 #statement-8				#outside statement
 
-	1. No exception then any except block will not execute.
-	2. Exception at statement-1 and outer except block matched then inner try-except-finally block and rest of outer try block will not execute.
+	1. No exception then outer try block ----> inner try block ---> inner finally block ---> inside statement ---> outside statement will execute.
+	2. Exception at statement-1 and outer except block matched then outer except block ---> outer finally block ---> outside statement will execute.
 	3. Exception at statement-1 and outer except block not matched then outer finally block will execute.
-	4. Exception at statement-2 and inner except block matched then rest of inner try-except-finally block and outer except block will not execute.
-	5. Exception at statement-2 and inner except block not matched but outer except block matched then inner except block and inside statement will not execute.
-	6. Exception at statement-2 and inner and outer except block both are not matched then inner try block, inner finally block and outer finally block will execute.
-	7. Exception at statement-3 and outer except block matched then inner try block, inner except block and inside statement will not execute.
-	8. Exception at statement-3 and outer except block not matched then inner try block, inner finally block and outside finally block will execute.
-	9. Exception at statement-4 and outer except block matched then inner finally block and inside statement will not execute.
-	10. Exception at statement-4 and outer except block not matched then inner finally block, inside statement and  will not execute.
-	11. 
-	12. 
+	4. Exception at statement-2 and inner except block matched then outer try block ---> inner except block ---> inner finally block ---> inside statement ---> outer finally block ---> outside statement will execute.
+	5. Exception at statement-2 and inner except block not matched but outer except block matched then outer try block ---> inner finally block ---> outer except block ---> outer finally block ---> outside statement will execute.
+	6. Exception at statement-2 and inner and outer except block both are not matched then outer try block ---> inner finally block ---> outer finally block will execute.
+	7. Exception at statement-3 and outer except block matched then outer try block ---> inner finally block ---> outer except block ---> outer finally block ---> outside statement will execute.
+	8. Exception at statement-3 and outer except block not matched then outer try block ---> inner finally block ---> outer finally block will execute.
+	9. Exception at statement-4 and outer except block matched then outer try block ---> inner try block ---> outer except block ---> outer finally block ---> outside statement will execute.
+	10. Exception at statement-4 and outer except block not matched then outer try block ---> inner try block ---> outer finally block will execute.
+	11. Exception at statement-5 and outer except block matched then outer try block ---> inner try block ---> inner finally block ---> outer except block ---> outer finally block ---> outside statement will execute.
+	12. Exception at statement-5 and outer except block not matched then outer try block ---> inner try block ---> inner finally block ---> outer finally block will execute.
+	13. Exception at statement-6 outer try block ---> inner try block ---> inner finally block ---> outer finally block will execute and also disrupt flow of program.
+	14. Exception at statement-7 and statement-8 then outer try block ---> inner try block ---> inner finally block ---> outer except block will execute will be executed and also disrupt the flow of program.
 '''

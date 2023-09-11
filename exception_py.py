@@ -73,8 +73,8 @@ BaseException
 
 Types of Exception: -
 ------------------
-	1. Predefined exceptions / Inbuilt exceptions: When there is a disrupt in normal flow then PVM will raise exception automatically.
-	2. User defined exceptions / Customized exceptions
+	1. Predefined exceptions / Inbuilt exceptions: Those exceptions which are pre-defined and raised by PVM automatically.
+	2. User defined exceptions / Customized exceptions: Those exceptions which are defined and raised by users on based of user requirement.
 
 Exception Handling: -
 ------------------
@@ -140,4 +140,13 @@ finally:					#finally outer block
 	12. Exception at statement-5 and outer except block not matched then outer try block ---> inner try block ---> inner finally block ---> outer finally block will execute.
 	13. Exception at statement-6 outer try block ---> inner try block ---> inner finally block ---> outer finally block will execute and also disrupt flow of program.
 	14. Exception at statement-7 and statement-8 then outer try block ---> inner try block ---> inner finally block ---> outer except block will execute will be executed and also disrupt the flow of program.
+
+	Syntax for user-defined exceptions:-
+	----------------------------------
+	class Exception_Name(Exception):			#declaring child class of Exception class
+		def __init__(self.variable_name):
+			self.variable_name = variable_name
+	
+	raise Exception_Name('Hello, World!')		#raising user-defined error
+	
 '''

@@ -8,7 +8,7 @@
 2) Relational operator: <  >  <=  >=  ==  !=
 3) Logical operator: and  or  not
 4) Bitwise operator: &  |  ^  ~  <<  >>
-5) Assignment operator: +=  -=  *=  **=  /=  //=  %=  &=  |=  ^=  >>=  <<=
+5) Assignment operator: +=  -=  *=  **=  /=  //=  %=  &=  |=  ^=  >>=  <<=	:=
 6) Identity operator: is  is not
 7) Membership operator: in  not in
 8) Ternary operator: ( condition ) if ( statement ) else ( statement )

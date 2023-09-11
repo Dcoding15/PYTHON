@@ -1,7 +1,83 @@
 #! /usr/bin/python3
 
 '''
+Exception Hirarchy: -
+------------------
+BaseException
+ +-- BaseExceptionGroup
+ +-- GeneratorExit
+ +-- KeyboardInterrupt
+ +-- SystemExit
+ +-- Exception
+      +-- ArithmeticError
+      |    +-- FloatingPointError
+      |    +-- OverflowError
+      |    +-- ZeroDivisionError
+      +-- AssertionError
+      +-- AttributeError
+      +-- BufferError
+      +-- EOFError
+      +-- ExceptionGroup [BaseExceptionGroup]
+      +-- ImportError
+      |    +-- ModuleNotFoundError
+      +-- LookupError
+      |    +-- IndexError
+      |    +-- KeyError
+      +-- MemoryError
+      +-- NameError
+      |    +-- UnboundLocalError
+      +-- OSError
+      |    +-- BlockingIOError
+      |    +-- ChildProcessError
+      |    +-- ConnectionError
+      |    |    +-- BrokenPipeError
+      |    |    +-- ConnectionAbortedError
+      |    |    +-- ConnectionRefusedError
+      |    |    +-- ConnectionResetError
+      |    +-- FileExistsError
+      |    +-- FileNotFoundError
+      |    +-- InterruptedError
+      |    +-- IsADirectoryError
+      |    +-- NotADirectoryError
+      |    +-- PermissionError
+      |    +-- ProcessLookupError
+      |    +-- TimeoutError
+      +-- ReferenceError
+      +-- RuntimeError
+      |    +-- NotImplementedError
+      |    +-- RecursionError
+      +-- StopAsyncIteration
+      +-- StopIteration
+      +-- SyntaxError
+      |    +-- IndentationError
+      |         +-- TabError
+      +-- SystemError
+      +-- TypeError
+      +-- ValueError
+      |    +-- UnicodeError
+      |         +-- UnicodeDecodeError
+      |         +-- UnicodeEncodeError
+      |         +-- UnicodeTranslateError
+      +-- Warning
+           +-- BytesWarning
+           +-- DeprecationWarning
+           +-- EncodingWarning
+           +-- FutureWarning
+           +-- ImportWarning
+           +-- PendingDeprecationWarning
+           +-- ResourceWarning
+           +-- RuntimeWarning
+           +-- SyntaxWarning
+           +-- UnicodeWarning
+           +-- UserWarning
+
+Types of Exception: -
+------------------
+	1. Predefined exceptions / Inbuilt exceptions: When there is a disrupt in normal flow then PVM will raise exception automatically.
+	2. User defined exceptions / Customized exceptions
+
 Exception Handling: -
+------------------
 	1. Error is an unexpected event which disturbs the normal flow of program. To handle such error we use exception handling.
 	2. Exception handling is a way to handling error by generating modified output to continue rest of program normally.
 	3. Every exceptions are child classes of BaseException (root of python's exception hirarcy)
@@ -9,9 +85,17 @@ Exception Handling: -
 	5. If any exception raised outside try block, then the error will disrupt the normal flow of program.
 	6. Except block will always catch error even if we don't provide any exeptions name. It is also called default except block. It must be at last position among except blocks.
 	7. The statement within finally block will considered most prioritise statement.
+	8. If try block executed without any execution then else block will be executed.
+	9. Either else block or except block will be executed.
+	10. Else block should be placed between except block and finally block.
+	11. With try block compulsory an except block or a finally block required.
+	12. With except block compulsory a try block required.
+	13. With finally block compulsory a try block required.
+	14. Number of finally block and else block under one try block is only one.
 
 	Syntax:-
 	------
+	# order ===> try ---> except ---> else ---> finally
 	try:														# try block will execute as normal flow of program
 		#statement-1
 		#statement-2

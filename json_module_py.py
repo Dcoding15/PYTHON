@@ -25,6 +25,6 @@ There is no huge difference between load and loads. The only thing is
 '''
 with open('abc.json', 'r') as a:
 	b = json.load(a)
-	#print(b) # To print all key and value pair from json file
+	#print(b) 							# To print all key and value pair from json file
 	print('My pincode is',b['pincode']) # To print single key and value pair from json file
 	a.close()

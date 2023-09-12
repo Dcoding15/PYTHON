@@ -63,6 +63,8 @@ Modes for open() function: -
 Note: These are used only for text file.
 There are 7 modes in open() function i.e., r, w, a, r+, w+, a+, x
 
+For binary file: rb, wb, ab, r+b, w+b, a+b, xb.
+
 For 'r' ==> read operation: -
 	(1) Open an existing file for read operation
 	(2) The file pointer is at the begenning of the file.
@@ -93,9 +95,6 @@ For 'a+' ==> To append and read operation: -
 
 For 'x' ==> exclusive creation mode: -
 	(1) It is used to perform write operation. If the spcified file is not there then it will give FileExistsError.
-
-
-For binary file: rb, wb, ab, r+b, w+b, a+b, xb.
 
 with statement: -
 --------------

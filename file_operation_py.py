@@ -97,9 +97,6 @@ For 'x' ==> exclusive creation mode: -
 
 For binary file: rb, wb, ab, r+b, w+b, a+b, xb.
 
-
-
-
 with statement: -
 --------------
 	1. File will be closed automatically.

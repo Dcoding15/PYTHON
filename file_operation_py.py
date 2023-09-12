@@ -1,5 +1,8 @@
 #! /usr/bin/python3
 '''
+File Handling: -
+-------------
+
 If sepecified file is not mentioned then with the 'w' (write) and 'a' (append) mode, it genreate that file automatically.
 We can also use 'x' (exclusive creation) mode to create a file. If the specified file exit then it return FileExitsError.
 By default the file will operate in text mode i.e., 't' and we can switch to binary mode using 'b'
@@ -23,19 +26,30 @@ There are 2 types of files: -
 Various properties of file object: -
 ---------------------------------
 
-	1. f = open('file_name', 'mode')
-	2. f.name <-- return name of file.
-	3. f.mode <-- return which mode is selected.
-	4. f.closed <-- return True if file is closed, otherwise False.
-	5. f.readable() <-- return True if file is readable file, otherwise False.
-	6. f.writeable() <-- return True if file is writeable file, otherwise False.
-	7. f.write() <-- It take only a string data-type as an argument and write only in single line without any new line.
-	8. f.writelines() <-- It can take any type of data-type argument like list, tuple, set, dictionary, string and write only in single line without any new line.
-	9. f.read() <-- return all data from the file.
-	10. f.read(N) <-- return N no. of character from the file. Where N is decimal integer.
-	11. f.readline() <-- return only one line from the file.
-	12. f.readlines() <-- return list of one line from file.
-	13. f.seek(N) <-- move to the Nth position of the file.
+	f = open('file_name', 'mode')	<-- opening file with its given mode
+	
+	f.closed()						<-- return True if file is closed, otherwise False.
+	f.detach()						<--
+	f.fileno()						<--
+	f.flush()						<--
+	f.isatty()						<--
+	f.tell()						<--	return position of cursor (file pointer) of file.
+	f.mode()						<-- return which mode is selected.
+	f.name()						<-- return name of file.
+
+	f.seek(N)						<-- move cursor (file pointer) to the Nth position of file.
+	f.seekable()					<-- return whether file allow to change cursor (file pointer).
+
+	f.turncate()					<--
+
+	f.readable()					<-- return True if file is readable file, otherwise False.
+	f.read(N)						<-- return N no. of character from the file. If we don't provide N as input then it will return all character from file.
+	f.readline()					<-- return only one line from the file.
+	f.readlines()					<-- return list of one line from file.
+
+	f.writeable()					<-- return True if file is writeable file, otherwise False.
+	f.write()						<-- It take only a string data-type as an argument and write only in single line without any new line.
+	f.writelines()					<-- It can take any type of data-type argument like list, tuple, set, dictionary, string and write only in single line without any new line.
 
 Note: -
 ----
@@ -82,6 +96,15 @@ For 'x' ==> exclusive creation mode: -
 
 
 For binary file: rb, wb, ab, r+b, w+b, a+b, xb.
+
+
+
+
+with statement: -
+--------------
+	1. File will be closed automatically.
+	2. Group file related operation within a block to improve readability.
+
 '''
 
 # Exclusive creation file

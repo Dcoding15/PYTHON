@@ -1,15 +1,15 @@
 import json
 
 '''
-json.dump(obj,fp)							<--- It takes object (python dictionary) and file pointer (fp) as an argument and return into JSON file.	
-json.dumps(obj)								<--- It takes object (python dictionary) as an argument and convert into JSON string.
-json.load(fp)								<--- It takes file pointer (fp) as an argument and return into Python dictionary.
-json.loads(obj)								<--- It takes object (JSON string) as an argument and convert into Python dictonary.
+json.dump()									<--- It takes python dictionary,file pointer as an argument and return data into JSON file.	
+json.dumps()								<--- It takes python dictionary as an argument and convert into JSON string.
+json.load()									<--- It takes file pointer as an argument and return into Python object.
+json.loads()								<--- It takes JSON string as an argument and return into Python object.
 json.encoder.JSONEncoder().default()		<---
 json.encoder.JSONEncoder().encode()			<---
 json.encoder.JSONEncoder().iterencode()		<---
-json.decoder.JSONDecoder().decode()			<---
-json.decoder.JSONDecoder().raw_decode()		<---
+json.decoder.JSONDecoder().decode()			<--- It takes JSON object as an argument and return Python string.
+json.decoder.JSONDecoder().raw_decode()		<--- It takes JSON object as an argument and return tuple i.e., (Python string, index where document ended).
 '''
 
 '''

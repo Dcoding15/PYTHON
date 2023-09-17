@@ -7,4 +7,6 @@ Multi-threading: -
 	2. Executing several task simultaneously is called multi-tasking. There are two types: -
 		(a) Process based multi-tasking: Each task is a seperate independent process. It is suitable of operating system level.
 		(b) Thread based multi-tasking: Each task is a seperate independent part of the same program. It is suitable for programmatic level.
+	3. Thread is flow of execution. It is an independent part of same program.
+	4. Multithreading is possible by using threading, time, queue module
 '''

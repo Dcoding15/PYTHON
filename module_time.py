@@ -75,15 +75,13 @@ thread_time_ns() -> int
 	Thread time for profiling as nanoseconds: sum of the kernel and user-space CPU time.
 
 time() -> floating point number
-
-Return the current time in seconds since the Epoch. Fractions of a second may be present if the system clock provides them.
+	Return the current time in seconds since the Epoch. Fractions of a second may be present if the system clock provides them.
 
 time_ns() -> int
 	Return the current time in nanoseconds since the Epoch.
 
 tzset()
-
-Initialize, or reinitialize, the local timezone to the value stored in os.environ['TZ']. The TZ environment variable should be specified in standard Unix timezone format as documented in the tzset man page (eg. 'US/Eastern', 'Europe/Amsterdam'). Unknown timezones will silently fall back to UTC. If the TZ environment variable is not set, the local timezone is set to the systems best guess of wallclock time. Changing the TZ environment variable without calling tzset *may* change the local timezone used by methods such as localtime, but this behaviour should not be relied on.
+	Reinitialize the local timezone to the value stored in os.environ['TZ']. Unknown timezones will silently fall back to UTC.
 
 Attributes: -
 ----------

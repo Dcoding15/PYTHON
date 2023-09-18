@@ -16,4 +16,8 @@ Multi-threading: -
 		(c) Create thread without extending thread class. (By creating normal class, then creating its object and using thread object)
 	7. There is identification number to each running thread and we can't change or set our own identification number because it is set by PVM (Python Virtual Machine).
 	8. Threads which are running in backgroud is called daemon threads. Main thread is always non-daemon threads. By default, daemon nature of child thread are same of their parent thread.
+
+	Synchronization: -
+	---------------
+		1. 
 '''

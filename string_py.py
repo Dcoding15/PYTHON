@@ -264,4 +264,6 @@ Note: -
 	2. By using repr(), we can convert the given object into string and reverse is also possible.
 	3. By using __repr__() returns the official string representation, which is aimed at programmers as they develop and maintain a program.
 	4. By using __str__() returns the informal string representation, a friendlier format for the program's user.
+	5. f''	<---	formatted string
+	   r''	<---	raw string
 '''

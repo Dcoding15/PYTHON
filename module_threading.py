@@ -39,7 +39,7 @@ Thread class: -
 			A boolean value indicating whether this thread is a daemon thread. This must be set before start() is called, otherwise RuntimeError is raised. Its initial value is inherited from the creating thread; the main thread is not a daemon thread and therefore all threads created in the main thread default to daemon = False. The entire Python program exits when only daemon threads are left.
 		name
 			A string used for identification purposes only. It has no semantics. Multiple threads may be given the same name. The initial name is set by the constructor.
-Timer class: -
+Timer class (child class of Thread class): -
 -----------
 	Methods: -
 	-------

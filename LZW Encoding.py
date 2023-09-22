@@ -1,3 +1,5 @@
+#LZW Encoding
+
 n = input('Enter string : ')	# Taking user input
 patrn = []						# Creating empty list for pattern
 pri_index = []					# Creating empty list for primary index

@@ -19,5 +19,39 @@ Multi-threading: -
 
 	Synchronization: -
 	---------------
-		1. 
+		1. If threads are executing simultaniously then there may be a chance of race condition (data inconsistency). To overcome race condition we have execute only one thread at a time.
+		2. There are three techniques of synchronisation: Lock, R-Lock, Semaphore.
+	
+		Lock: -
+		----
+			1. Lock().acquire()	---> one thread will be locked
+			2. Lock().release() ---> one thread will be released
+			3. It will allow to lock one thread at a time i.e., locking more than one thread will create deadlock.
+		
+		RLock (Reentrante Lock): -
+		-----------------------
+			1. It's methods are same as Lock() but the only difference is it will relock another thread after removing previous thread.
+			2. It automatically release lock if working of thread is completed.
+		
+		Semaphore: -
+		---------
+			1. A semaphore manages an internal counter which is decremented by each acquire() call and incremented by each release() call.
+			2. The counter can never go below zero when acquire() finds that it is zero, it blocks, waiting until some other thread calls release().
+			3. In python it takes counter as an argument (no. of instructions perform by a thread). By default semaphore counter is 1.
+			4. No. of acquire() and release() need not to be matched.
+		
+		Bounded Semaphore: -
+		-----------------
+			1. It is same as semaphore but the only difference is no. of acquire() and release() need to be matched. If no. of acquire() and release() is not same then PVM will throw "ValueError: Semaphore released too many times".
+		
+		Barrier: -
+		-------
+			1. It allows multiple threads to wait on same barrier object until a predefined fixed no. of thread arrives. After arrival of fixed no. of threads, those thread are released for execution.
+			2. wait() used on each thread to wait until required no. of threads arrived.
+	
+	Inter-thread communication: -
+	--------------------------
+		1. Inter-processes communication is a set of techniques for the exchange of data among multiple threads in one or more processes.
+		   Inter thread communication in Python is the process of sharing data between threads. This can be done using a variety of methods, including queues, conditions on object, and events object.
+		2.
 '''

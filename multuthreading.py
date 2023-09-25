@@ -53,4 +53,6 @@ Multi-threading: -
 	--------------------------
 		1. Inter-processes communication is a set of techniques for the exchange of data among multiple threads in one or more processes.
 		   Inter thread communication in Python is the process of sharing data between threads. This can be done using a variety of methods, including queues,conditions, and events.
+		2. Effective method of inter thread communicaiton is queue.
+		3. If a thread raise error after getting lock then remaining thread will wait until locked thread got released. We can handle those errors either by using exception handling or with block.
 '''

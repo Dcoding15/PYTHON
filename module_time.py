@@ -8,7 +8,7 @@ Funtions: -
 
 asctime([tuple]) -> string
 	Convert a time tuple to a string, e.g. 'Sat Jun 06 16:26:11 1998'. When the time tuple is not present, current time as returned by localtime() is used.
- 	Argument tuple are (year, month, date, hour, minute, second, day, 0, 0)
+ 	Argument tuple are (year, month, date, hour, minute, second, day, day of year, 0)
 
 clock_getres(clk_id) -> floating point number
 	Return the resolution (precision) of the specified clock clk_id.

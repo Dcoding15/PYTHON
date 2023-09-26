@@ -8,6 +8,7 @@ Funtions: -
 
 asctime([tuple]) -> string
 	Convert a time tuple to a string, e.g. 'Sat Jun 06 16:26:11 1998'. When the time tuple is not present, current time as returned by localtime() is used.
+ 	Argument tuple are (year, month, date, hour, minute, second, day, 0, 0)
 
 clock_getres(clk_id) -> floating point number
 	Return the resolution (precision) of the specified clock clk_id.
@@ -37,8 +38,7 @@ localtime([seconds]) -> (tm_year,tm_mon,tm_mday,tm_hour,tm_min, tm_sec,tm_wday,t
 	Convert seconds since the Epoch to a time tuple expressing local time. When 'seconds' is not passed in, convert the current time instead.
 
 mktime(tuple) -> floating point number
-
-Convert a time tuple in local time to seconds since the Epoch. Note that mktime(gmtime(0)) will not generally return zero for most time zones; instead the returned value will either be equal to that of the timezone or altzone attributes on the time module.
+	Convert a time tuple in local time to seconds since the Epoch. Note that mktime(gmtime(0)) will not generally return zero for most time zones; instead the returned value will either be equal to that of the timezone or altzone attributes on the time module.
 
 monotonic() -> float
 	Monotonic clock, cannot go backward.

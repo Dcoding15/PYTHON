@@ -106,7 +106,7 @@ Code Formats: -
 %Y			Year with century as a decimal number.
 %m			Month as a decimal number [01,12].
 %d			Day of the month as a decimal number [01,31].
-%H  		Hour (24-hour clock) as a decimal number [00,23].
+%H  		        Hour (24-hour clock) as a decimal number [00,23].
 %M			Minute as a decimal number [00,59].
 %S			Second as a decimal number [00,61].
 %z			Time zone offset from UTC.

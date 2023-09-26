@@ -8,7 +8,7 @@ Funtions: -
 
 asctime([tuple]) -> string
 	Convert a time tuple to a string, e.g. 'Sat Jun 06 16:26:11 1998'. When the time tuple is not present, current time as returned by localtime() is used.
- 	Argument tuple are (year, month, date, hour, minute, second, day, day of year, 0)
+ 	Argument tuple are (time_year, time_mon, time_mday, time_hour, time_min, time_sec, time_wday, time_yday, time_isdst)
 
 clock_getres(clk_id) -> floating point number
 	Return the resolution (precision) of the specified clock clk_id.
@@ -90,7 +90,7 @@ Attributes: -
 
 tm_gmtoff	offset from UTC in seconds
 tm_hour		hours, range [0, 23]
-tm_isdst	1 if summer time is in effect, 0 if not, and -1 if unknown
+tm_isdst	1 if daylight time is in effect, 0 if not, and -1 if unknown
 tm_mday		day of month, range [1, 31]
 tm_min		minutes, range [0, 59]
 tm_mon		month of year, range [1, 12]
@@ -117,6 +117,27 @@ Code Formats: -
 %c			Locale's appropriate date and time representation.
 %I			Hour (12-hour clock) as a decimal number [01,12].
 %p			Locale's equivalent of either AM or PM.
+
+Clock Id: -
+--------
+time.CLOCK_BOOTTIME		Identical to CLOCK_MONOTONIC, except it also includes any time that the system is suspended. This allows applications to get a suspend-aware monotonic clock without having to deal with the complications of CLOCK_REALTIME, which may have discontinuities if the time is changed using settimeofday() or similar.
+time.CLOCK_HIGHRES		The Solaris OS has a CLOCK_HIGHRES timer that attempts to use an optimal hardware source, and may give close to nanosecond resolution. CLOCK_HIGHRES is the nonadjustable, high-resolution clock.
+time.CLOCK_MONOTONIC		Clock that cannot be set and represents monotonic time since some unspecified starting point.
+time.CLOCK_MONOTONIC_RAW	Similar to CLOCK_MONOTONIC, but provides access to a raw hardware-based time that is not subject to NTP adjustments.
+time.CLOCK_PROCESS_CPUTIME_ID	High-resolution per-process timer from the CPU.
+time.CLOCK_PROF			High-resolution per-process timer from the CPU.
+time.CLOCK_TAI			(International Atomic Time) The system must have a current leap second table in order for this to give the correct answer. PTP or NTP software can maintain a leap second table.
+time.CLOCK_THREAD_CPUTIME_ID	Thread-specific CPU-time clock.
+time.CLOCK_UPTIME		Time whose absolute value is the time the system has been running and not suspended, providing accurate uptime measurement, both absolute and interval.
+time.CLOCK_UPTIME_RAW		Clock that increments monotonically, tracking the time since an arbitrary point, unaffected by frequency or time adjustments and not incremented while the system is asleep.
+time.CLOCK_REALTIME		System-wide real-time clock. Setting this clock requires appropriate privileges.
+
+Timezone Constants: -
+------------------
+time.altzone	The offset of the local DST timezone, in seconds west of UTC, if one is defined. This is negative if the local DST timezone is east of UTC (as in Western Europe, including the UK). Only use this if daylight is nonzero. See note below.
+time.daylight	Nonzero if a DST timezone is defined. See note below.
+time.timezone	The offset of the local (non-DST) timezone, in seconds west of UTC (negative in most of Western Europe, positive in the US, zero in the UK). See note below.
+time.tzname	A tuple of two strings: the first is the name of the local non-DST timezone, the second is the name of the local DST timezone. If no DST timezone is defined, the second string should not be used. See note below.
 
 Other codes may be available on your platform.  See documentation for
 the C library strftime function.

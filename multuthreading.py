@@ -48,6 +48,12 @@ Multi-threading: -
 		-------
 			1. It allows multiple threads to wait on same barrier object until a predefined fixed no. of thread arrives. After arrival of fixed no. of threads, those thread are released for execution.
 			2. wait() used on each thread to wait until required no. of threads arrived.
+
+	 	Timer: -
+		-----
+  			1. It represents an action that should run only after certain period of time.
+	 		2. It can be start using start() and can be canceled any time using cancel().
+			3. It takes interval (float), function which are compulsory.
 	
 	Inter-thread communication: -
 	--------------------------

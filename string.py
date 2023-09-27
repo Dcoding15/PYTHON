@@ -266,4 +266,5 @@ Note: -
 	4. By using __str__() returns the informal string representation, a friendlier format for the program's user.
 	5. f''	<---	formatted string
 	   r''	<---	raw string
+	   b''	<---	byte string
 '''

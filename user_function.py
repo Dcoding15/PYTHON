@@ -254,4 +254,25 @@ def f1():
 fun(f1)         #passing f1() as argument
                 #f1() and parameter of fun() i.e., x are pointing to same address
 
+Only parameter: -
+--------------
+For example: -
+def fun(c,*,a,b):		#Valid parameter declaration
+	return [a,b,c]
+
+def fun(a,b,c,*):		#Invalid parameter declaration
+	return [a,b,c]
+
+Keyword only parameter (*): -
+--------------------------
+	(1) After * parameter, there can be only keyword parameters.
+	(2) Before * parameter, there can be both keyword and positional parameters.
+	(3) * parameter can't be last position amoung parameters.
+
+Positional only parameter (/): -
+-----------------------------
+	(1) After / parameter, there can be both positional and keyword parameters.
+	(2) Before / parameter, there can be only positional parameters.
+	(3) / parameter can't be last position amoung parameters.
+
 '''

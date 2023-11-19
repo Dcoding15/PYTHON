@@ -145,10 +145,10 @@ llist = linkedlist()
 #llist.insertAtPosition('a',5)
 
 # Inserting new node at end of single linked list
-llist.insertAtEnd(10)
-llist.insertAtEnd(20)
-llist.insertAtEnd(30)
-llist.insertAtEnd(40)
+#llist.insertAtEnd(10)
+#llist.insertAtEnd(20)
+#llist.insertAtEnd(30)
+#llist.insertAtEnd(40)
 
 # Removing existing node from begin of single linked list
 #llist.removeAtBegin()
@@ -177,7 +177,7 @@ llist.insertAtEnd(40)
 #llist.update(20,'abc')
 #llist.update(30,'abc')
 #llist.update(40,'abc')
-llist.update(500,'abc')
+#llist.update(500,'abc')
 
 # Traversing single linked list
-llist.traverse()
+#llist.traverse()

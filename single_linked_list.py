@@ -181,3 +181,14 @@ llist = linkedlist()
 
 # Traversing single linked list
 #llist.traverse()
+
+#Time Complexity: -
+# Insertion at beginnig     : O(1)
+# Insertion at any position : O(n)
+# Insetion at ending        : O(n)
+# Deletion at beginnig      : O(1)
+# Deletion at any position  : O(n)
+# Deletion at ending        : O(n)
+# Traverse                  : O(n)
+
+#Space Complexity: O(1) (because of creating one temporary variable)

@@ -1,0 +1,4 @@
+STEP 1: install python3 virtual environment
+STEP 2: python3 -m venv [folder name]
+STEP 3 (run python virtual environment): source [folder name]/bin/activate
+STEP 4(stop python virtual environment): deactivate

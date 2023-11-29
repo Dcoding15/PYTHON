@@ -1,0 +1,177 @@
+Operators: -
+---------
+	Query and Projection Operators: -
+	------------------------------
+		(1) Comparision Query Operator: -
+				$eq		---> equal to
+				Syntax: { <field>: { $eq: <value> } }
+				
+				$ne		---> not equal to
+				Syntax: { field: { $ne: value } }
+				
+				$gt		---> greater than
+				Syntax: { field: { $gt: value } }
+				
+				$gte	---> greater than equal to
+				Syntax: { field: { $gte: value } }
+				
+				$lt		---> less than
+				Syntax: { field: { $lt: value } }
+				
+				$lte	---> less than equal to
+				Syntax: { field: { $lte: value } }
+				
+				$in		---> within specified
+				Syntax: { field: { $in: [<value1>, <value2>, ... <valueN> ] } }
+				
+				$nin	---> not within specified
+				Syntax: { field: { $nin: [ <value1>, <value2> ... <valueN> ] } }
+				
+		(2) Logical Query Operator: -
+				$not	---> LOGICAL NOT
+				Syntax: { field: { $not: { <operator-expression> } } }
+				
+				$and	---> LOGICAL AND
+				Syntax: { $and: [ { <expression1> }, { <expression2> } , ... , { <expressionN> } ] }
+				
+				$or		---> LOGICAL OR
+				Syntax: { $or: [ { <expression1> }, { <expression2> }, ... , { <expressionN> } ] }
+				
+				$nor	---> LOGICAL NOR
+				Syntax: { $nor: [ { <expression1> }, { <expression2> }, ...  { <expressionN> } ] }
+				
+		(3) Element Query Operator: -
+				$exists	---> if $exists value is true then matches documents that have the specified field. If $exists is false then matches documents that don't have the specified field.
+				Syntax: { field: { $exists: <boolean> } }
+				
+				type	---> select specified type field of a document. 
+				Syntax: { field: { $type: <BSON type> } }
+						{ field: { $type: [ <BSON type1> , <BSON type2>, ... ] } }
+
+				For more info: https://www.mongodb.com/docs/manual/reference/operator/query/type/#available-types
+
+		(4) Evaluation Query Operator: -
+				$expr	---> use for aggregation operation.
+				Syntax: { $expr: { <expression> } }
+                
+				$jsonSchema		---> use for validation of documents.
+				Syntax: { $jsonSchema: <JSON Schema object> }
+                
+				For more info: https://www.mongodb.com/docs/manual/reference/operator/query/jsonSchema/#available-keywords
+
+				$regex	---> select document where values matches specified regular expression.
+				Syntax: { <field>: { $regex: /pattern/, $options: '<options>' } }
+						{ <field>: { $regex: 'pattern', $options: '<options>' } }
+						{ <field>: { $regex: /pattern/<options> } }
+
+						We can also use regular expression without $regex i.e., { <field>: /pattern/<options> }
+                
+				For more info: https://www.mongodb.com/docs/manual/reference/operator/query/regex/#mongodb-query-op.-options
+
+				$text	---> use for text search.
+				Syntax: {
+                          $text: {
+                            $search: <string>,
+                            $language: <string>,			(By default value none)
+                            $caseSensitive: <boolean>,		(By default value false)
+                            $diacriticSensitive: <boolean>	(By default value false)
+                          }
+                         }
+                 
+                For more info: https://www.mongodb.com/docs/manual/reference/operator/query/text/#behavior
+
+				$where	---> select documents that satisfy JavaScript expression
+				Syntax: { $where: <string|JavaScript Code> }
+
+		(5) Geospatial Query Operator: -
+				$geoIntersects	---> 
+				Syntax: 
+
+				$geoWithin		---> 
+				Syntax: 
+
+				$near			---> 
+				Syntax: 
+
+				$nearSphere		---> 
+				Syntax: 
+
+				$box			---> 
+				$center			---> 
+				$centerSphere	---> 
+				$geometery		---> 
+				$maxDistance	---> 
+				$minDistance	---> 
+				$polygon		---> 
+				
+		(6) Array Query Operator: -
+				$all		---> select documents of specified elements
+				Syntax: { <field>: { $all: [ <value1> , <value2> ... ] } }
+
+				$elemMatch	---> Selects documents if list of elements of a field matches all the specified conditions.
+				Syntax: { <field>: { $elemMatch: { <query1>, <query2>, ... } } }
+
+				$size		---> Selects documents if the array field is a specified size.
+				Syntax: { field: { $size: int_value } }
+				
+		(7) Bitwise Query Operator: -
+				$bitsAllClear	---> Matches binary or numeric values in which a set of bits have value 0 in all sets of specified positions..
+				Syntax: { <field>: { $bitsAllClear: <numeric bitmask> } }
+                        { <field>: { $bitsAllClear: < BinData bitmask> } }
+                        { <field>: { $bitsAllClear: [ <position1>, <position2>, ... ] } }
+
+				$bitsAllSet		---> Matches binary or numeric values in which a set of bits have value 1 in all sets of specified positions.
+				Syntax: { <field>: { $bitsAllSet: <numeric bitmask> } }
+                        { <field>: { $bitsAllSet: < BinData bitmask> } }
+                        { <field>: { $bitsAllSet: [ <position1>, <position2>, ... ] } }
+
+				$bitAnyClear	---> Matches binary or numeric values in which a set of bits have value 0 in any sets of specified positions.
+				Syntax: { <field>: { $bitsAnyClear: <numeric bitmask> } }
+                        { <field>: { $bitsAnyClear: < BinData bitmask> } }
+                        { <field>: { $bitsAnyClear: [ <position1>, <position2>, ... ] } }
+
+				$bitsAnySet		---> Matches binary or numeric values in which a set of bits have value 1 in any sets of specified positions.
+				Syntax: { <field>: { $bitsAnySet: <numeric bitmask> } }
+                        { <field>: { $bitsAnySet: < BinData bitmask> } }
+                        { <field>: { $bitsAnySet: [ <position1>, <position2>, ... ] } }
+				
+		(8) Projection Operator: -
+				$			---> Projects the first element in an array that matches the query condition.
+				Syntax: db.collection.find( { <array>: <condition> ... },{ "<array>.$": 1 } )
+				
+				$elemMatch	---> Projects the first element in an array that matches the specified condition.
+				Syntax: db.collection.find( { <array>: <condition> ... },{ field: { $elemMatch : <condition> }} )
+
+				$slice		---> 
+				Syntax: db.collection.find(<query>,{ <arrayField>: { $slice: [ <number>, <number> ] } });
+				
+		(9) Miscellaneous Query Operator: -
+				$comment	---> Adds a comment.
+				Syntax: db.collection.find( { <query>, $comment: <comment> } )
+
+				$rand		---> Generate random float number between 0 and 1.
+				Syntax: { $rand: {} }
+
+				$natural	---> Sort order of documents in natural order.
+				Syntax: db.collection.find().sort({ $natural: <int value> });	(1 for true and 0 for false)
+
+	Update Operators: -
+
+
+CURD operation: -
+--------------
+	Insert: -
+	------
+		Insert only one document	--->	db.collection_name.insertOne({})
+		Insert many document		--->	db.collection_name.insertMany([{},{},{},{},...])
+
+	Note: Insert operation can create collection.
+
+	Query: -
+	-----
+		Select all documents		--->	db.collection_name.find({})
+		Select specified documents	--->	db.collection_name.find({key:value})
+	
+	Update: -
+	------
+		Update only one document 	--->	db.collection_name.updateOne()

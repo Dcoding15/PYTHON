@@ -7,7 +7,7 @@ def image_quantization():
     num_colors = 16		# no. of colors for quantisation
     
     # Reshape the image to a 2D array of pixels
-    pixels = image.reshape((2,3))
+    pixels = image.reshape(image.shape)
     
     # Convert the pixel values to float32 for k-means
     pixels = np.float32(pixels)
@@ -28,8 +28,7 @@ def image_quantization():
     cv2.imshow("Quantized Image", quantized_image)
     
 	# Save the Quantized image
-    output_image_path = 'quantized_image.jpg'
-    cv2.imwrite(output_image_path, quantized_image)
+    cv2.imwrite('Quantized Image.jpg', quantized_image)
     
     cv2.waitKey(0)
     cv2.destroyAllWindows()

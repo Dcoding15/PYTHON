@@ -7,10 +7,10 @@ image_path = path.img# Replace 'your_image.jpg' with the path to your image
 image = cv2.imread(image_path)
 
 # Convert the image to grayscale
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+gray = cv2.imread(path.img, cv2.IMREAD_GRAYSCALE)
 
 # Apply Gaussian blur to reduce noise
-blur = cv2.GaussianBlur(gray, (5, 5), 0)
+blur = cv2.GaussianBlur(gray, (153, 153), 0)
 
 # Threshold the image to create markers for seeds
 _, thresh = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
@@ -38,11 +38,10 @@ cv2.watershed(image, markers)
 image[markers == -1] = [0, 0, 255]  # Mark watershed boundaries in red
 
 # Display the result
-cv2.imshow('Watershed Segmentation', image)
+#cv2.imshow('Watershed Segmentation', image)
 
 # Save the Watershed Segmentation
-output_image_path = 'watershed_segmentation_image.jpg'
-cv2.imwrite(output_image_path, image)
+cv2.imwrite('Watershed Segmentation.jpg', image)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()

@@ -2,9 +2,9 @@ import cv2
 import numpy as np
 import path
 
-def band_pass_filter(image, low_cutoff, high_cutoff, kernel_size=(3, 3)):
+def band_pass_filter(image, low_cutoff, high_cutoff, kernel_size=(15, 15)):
     # Convert the image to grayscale
-    gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    gray_image = image
 
     # Apply a low-pass filter (Gaussian blur) to the image
     low_pass_filtered = cv2.GaussianBlur(gray_image, kernel_size, 0)
@@ -21,8 +21,7 @@ def band_pass_filter(image, low_cutoff, high_cutoff, kernel_size=(3, 3)):
     return band_pass_result
 
 # Load the input image
-input_image_path = path.img
-image = cv2.imread(input_image_path)
+image = cv2.imread(path.img, cv2.IMREAD_REDUCED_GRAYSCALE_2)
 
 if image is None:
     print("Error: Could not load image.")
@@ -35,12 +34,11 @@ else:
     band_pass_result = band_pass_filter(image, low_cutoff, high_cutoff)
 
     # Display the original and band-pass filtered images
-    cv2.imshow('Original Image', image)
-    cv2.imshow('Band-Pass Filtered Image', band_pass_result)
+    #cv2.imshow('Original Image', image)
+    #cv2.imshow('Band-Pass Filtered Image', band_pass_result)
 
     # Save the band-pass filtered image
-    output_image_path = 'band_pass_filtered_image.jpg'
-    cv2.imwrite(output_image_path, band_pass_result)
+    cv2.imwrite('Bandpass Filtered Image.jpg', band_pass_result)
 
     # Add a delay and wait for a key press to close the windows
     cv2.waitKey(0)

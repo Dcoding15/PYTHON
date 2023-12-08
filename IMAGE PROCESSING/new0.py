@@ -34,11 +34,6 @@ print("Binary image format:", binary_image.format)
 print("Binary image size:", binary_image.size)
 print("Binary image mode:", binary_image.mode)
 
-# Show the binary image
-binary_image.show()
-
-# Show the grayscale image
-gray_image.show()
-
-# Show the image (optional)
-image.show()
+binary_image.save('Binary Image.jpg')
+gray_image.save('Grey Image.jpg')
+image.save('Normal Image.jpg')

@@ -1,10 +1,11 @@
 from PIL import Image
 import matplotlib.pyplot as plt
+import cv2
 import path
 
 def display_channels(image_path):
     # Open the image using PIL
-    image = Image.open(image_path)
+    image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
     
     # Split the image into its RGB channels
     red_channel, green_channel, blue_channel = image, image, image
@@ -25,6 +26,7 @@ def display_channels(image_path):
     plt.title('Blue Channel')
     
     plt.tight_layout()
+    plt.savefig("RGB Channels.jpg")
     plt.show()
 
 # Path to the input image

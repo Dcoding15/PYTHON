@@ -26,12 +26,11 @@ else:
     gradient_magnitude_normalized = cv2.normalize(gradient_magnitude, None, 0, 255, cv2.NORM_MINMAX, cv2.CV_8U)
 
     # Display the original image and the edge-detected image
-    cv2.imshow('Original Image', image)
-    cv2.imshow('Edge-Detected Image (Gaussian Filter)', gradient_magnitude_normalized)
+    #cv2.imshow('Original Image', image)
+    #cv2.imshow('Edge-Detected Image (Gaussian Filter)', gradient_magnitude_normalized)
     
     # Save the Edge-Detected Image (Gaussian Filter)
-    output_image_path = 'edge_detected_image.jpg'
-    cv2.imwrite(output_image_path, gradient_magnitude_normalized)
+    cv2.imwrite('Edge-Detected Image (Gaussian Filter).jpg', gradient_magnitude_normalized)
 
     # Wait for a key press and then close the windows
     cv2.waitKey(0)

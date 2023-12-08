@@ -15,6 +15,6 @@ def show_intensity_histogram(image_path):
     plt.xlabel("Intensity Value")
     plt.ylabel("Frequency")
     plt.xlim([0, 256])
-    plt.show()
+    plt.savefig('Grey Image Histogram.jpg')
 
 show_intensity_histogram(path.img)

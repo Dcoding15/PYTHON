@@ -3,7 +3,7 @@ import numpy as np
 import path
 
 def display_intensity_binary(image_path, threshold=128):
-    image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+    image = cv2.imread(image_path, cv2.IMREAD_REDUCED_GRAYSCALE_8)
     height, width = image.shape
     
     for i in range(height):
@@ -12,5 +12,4 @@ def display_intensity_binary(image_path, threshold=128):
             print(binary_value, end='')
         print()
 
-input_image_path = path.img
-display_intensity_binary(input_image_path)
+display_intensity_binary(path.img1)

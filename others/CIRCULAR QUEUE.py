@@ -5,7 +5,7 @@ class Circular_Queue:
         self.circular_queue_limit = 5	# circular queue size limit
     
     def enqueue(self):
-        if len(self.circular_queue) == self.circular_queue_limit:
+        if len(Circular_Queue.circular_queue) == self.circular_queue_limit:
             print("CIRCULAR QUEUE Overflow\n")
         elif Circular_Queue.high == -1 and Circular_Queue.low == -1:
             Circular_Queue.high, Circular_Queue.low = 0, 0
@@ -24,8 +24,8 @@ class Circular_Queue:
             Circular_Queue.high, Circular_Queue.low = -1, -1
             print('case 3')
         else:
-            print("DEQUEUE ELEMENT:",Circular_Queue.circular_queue.pop(Circular_Queue.low))
-            Circular_Queue.low = (Circular_Queue.low + 1) % self.circular_queue_limit
+            print("DEQUEUE ELEMENT:",Circular_Queue.circular_queue.pop(0))
+            #Circular_Queue.low = (Circular_Queue.low + 1) % self.circular_queue_limit
             print('case 4')
     
     def display(self):

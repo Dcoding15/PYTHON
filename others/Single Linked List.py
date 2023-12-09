@@ -25,7 +25,7 @@ class linkedlist:
 
 	def insertAtPosition(self, data, position):
 	    nlist = node(data)
-	    size = self.countlist()
+		size = self.countlist()
 	    if position > size:
 	    	self.insertAtEnd(data)
 	    elif position <= 1:
@@ -35,7 +35,7 @@ class linkedlist:
 	    	count = 1
 	    	while count != position-1:
 	    		count += 1
-	    		clist = clist.next
+       			clist = clist.next
 	    	print(f"Element {nlist.data} inserted")
 	    	nlist.next = clist.next
 	    	clist.next = nlist

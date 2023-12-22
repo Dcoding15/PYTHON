@@ -1,10 +1,14 @@
+#! /usr/bin/python3
+
+# Round Robin Scheduling (Preemptive Algorithm)
+
 from sys import maxsize
-arrival_time = [0,1,2,3,4,4]
-burst_time = [7,4,15,11,20,9]
+arrival_time = []
+burst_time = []
 waiting_time = []
 completion_time = []
 turn_around_time = []
-pid = ['P1','P2','P3','P4','P5','P6']
+pid = []
 time_quantum = 5
 tmp = []
 
@@ -24,40 +28,39 @@ for i in range(no_of_processes):
     a.append(arrival_time[i])
 start_time = [[0 for _ in range(2)] for _ in range(no_of_processes)]
 
-#------------------------------------------------------------------------------------------
+#------------------------code starts from below-----------------------------------------
 while(c != 0):
     mini = maxsize
     flag = False
-    
-    for i in range(no_of_processes):
+        for i in range(no_of_processes):
         if a[i] <= time and mini > a[i] and b[i] > 0:
             indx = i
             mini = a[i]
             flag = True
-    
+
     if not flag:
         time += 1
         continue
-    
+
     j = 0
-    
+
     if s[indx][j] != 1:
         j += 1
-    
+
     if s[indx][j] == -1:
         s[indx][j] = time
         start_time[indx][j] = time
-    
+
     if b[indx] <= time_quantum:
         time += b[indx]
         b[indx] = 0
     else:
         time += time_quantum
         b[indx] -= time_quantum
-    
+
     if b[indx] > 0:
         a[indx] = time + 0.01
-    
+
     if b[indx] == 0:
         c -= 1
         completion_time.append(time)
@@ -76,11 +79,3 @@ for i in range(len(completion_time)):
 
 print("Average Waiting Time:",sum(turn_around_time)/no_of_processes)
 print("Average Turn Around Time:",sum(waiting_time)/no_of_processes)
-'''
-
-Enter Time Quantum: 5
-Enter Process ID: 1 2 3 4 5 6
-Enter Arrival Time: 0 1 2 3 4 4
-Enter Burst Time: 7 4 15 11 20 9
-
-'''

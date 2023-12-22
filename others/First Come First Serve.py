@@ -1,7 +1,6 @@
 #! /usr/bin/python3
 
-# First Come First Server (Non-preemtive)
-# Note: In case of non-preemtive response time is same as waiting time.
+# First Come First Server (Non-preemtive Algorithm)
 
 pid, arrival_time, burst_time, completion_time, turn_around_time, waiting_time = [],[],[],[],[],[]
 
@@ -13,6 +12,7 @@ for i in range(len(pid)):
 	bt = int(input(f'Enter burst time for process ID {pid[i]}: '))
 	burst_time.append(bt)
 
+# sorting according to arrival time
 for i in range(len(pid)):
 	for j in range(i,len(pid)):
 		if arrival_time[i] > arrival_time[j]:
@@ -21,12 +21,12 @@ for i in range(len(pid)):
 			pid[i], pid[j] = pid[j], pid[i]
 
 for i in range(len(pid)):
-	if completion_time == []:
-		completion_time.append(arrival_time[i] + burst_time[i])			#time completion of an initial process
-	elif completion_time[i-1] > arrival_time[i]:
-		completion_time.append(completion_time[i-1] + burst_time[i])	#if any process arrives after the completion of an existing process
-	else:
-		completion_time.append(arrival_time[i] + burst_time[i])			#if any process arrives before the completion of an existing process
+	if completion_time == []:											#time completion of an initial process
+		completion_time.append(arrival_time[i] + burst_time[i])
+	elif completion_time[i-1] >= arrival_time[i]:						#if any process arrives before the completion of an existing process
+		completion_time.append(completion_time[i-1] + burst_time[i])
+	else:																#if any process arrives after the completion of an existing process
+		completion_time.append(arrival_time[i] + burst_time[i])
 
 for i in range(len(pid)):
 	turn_around_time.append(completion_time[i] - arrival_time[i])

@@ -1,0 +1,1151 @@
+1a.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Semester Routine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Semester Routine</h1>
+
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+        <tr>
+            <td>9:00 AM - 10:30 AM</td>
+            <td>Class 1</td>
+            <td>Class 2</td>
+            <td></td>
+            <td>Class 3</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>11:00 AM - 12:30 PM</td>
+            <td>Study Group</td>
+            <td></td>
+            <td>Class 4</td>
+            <td>Class 5</td>
+            <td></td>
+        </tr>
+        <!-- Add more rows for each time slot -->
+    </table>
+
+</body>
+</html>
+
+1b.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Calculator</title>
+</head>
+<body>
+
+    <h2>Factorial Calculator</h2>
+
+    <form method="post" action="">
+        Enter a number:
+        <input type="number" name="number" required>
+        <input type="submit" name="submit" value="Calculate Factorial">
+    </form>
+
+</body>
+</html>
+<?php
+        function calculateFactorial($number) {
+            if ($number == 0 || $number == 1) {
+                return 1;
+            } else {
+                return $number * calculateFactorial($number - 1);
+            }
+        }
+
+        if (isset(($_POST['submit']))) {
+			$inputNumber = $_POST['number'];
+            if ($inputNumber >= 0) {
+                $factorial = calculateFactorial($inputNumber);
+                echo "<p>The factorial of $inputNumber is: $factorial</p>";
+            } else {
+                echo "<p>Please enter a non-negative numeric value.</p>";
+            }
+        }
+    ?>
+
+2a.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Semester Grade Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Previous Semester Grade Sheet</h1>
+
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Grade</th>
+        </tr>
+        <tr>
+            <td>Mathematics</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>Physics</td>
+            <td>B+</td>
+        </tr>
+        <tr>
+            <td>Computer Science</td>
+            <td>A-</td>
+        </tr>
+        <!-- Add more rows for each course -->
+    </table>
+
+</body>
+</html>
+
+2b.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Greeting Program</title>
+</head>
+<body>
+
+    <h2>Enter Your Name</h2>
+
+    <form method="post" action="">
+        <label>Name:</label>
+        <input type="text" name="name" required>
+        <input type="submit" value="Submit" name="submit">
+    </form>
+
+</body>
+</html>
+
+<?php
+        if (isset($_POST['submit'])) {
+			$userName = $_POST['name'];
+            echo "<h2>Hello, $userName welcome to our website.</h2>";
+        }
+    ?>
+
+3a.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bio Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Bio Data</h1>
+
+    <h2>Personal Information</h2>
+    <p><strong>Name:</strong> Your Name</p>
+    <p><strong>Date of Birth:</strong> Your Date of Birth</p>
+    <p><strong>Address:</strong> Your Address</p>
+    <p><strong>Email:</strong> Your Email</p>
+    <p><strong>Phone:</strong> Your Phone Number</p>
+
+    <h2>Education</h2>
+    <p><strong>University:</strong> Your University</p>
+    <p><strong>Degree:</strong> Your Degree</p>
+    <p><strong>Major:</strong> Your Major</p>
+    <p><strong>Graduation Year:</strong> Your Graduation Year</p>
+
+    <h2>Work Experience</h2>
+    <p><strong>Job Title:</strong> Your Job Title</p>
+    <p><strong>Company:</strong> Your Company</p>
+    <p><strong>Duration:</strong> Start Date - End Date</p>
+    <p><strong>Responsibilities:</strong> Your Responsibilities</p>
+
+    <!-- Add more sections as needed -->
+
+</body>
+</html>
+
+3b.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Number Calculator</title>
+</head>
+<body>
+
+    <h2>Enter a Number</h2>
+
+    <form method="post" action="">
+        <label>Number:</label>
+        <input type="text" name="number" required>
+        <input type="submit" name="submit" value="Calculate Reverse">
+    </form>
+
+</body>
+</html>
+
+    <?php
+        if (isset($_POST["submit"])) {
+            $inputNumber = $_POST["number"];
+            $reversedNumber = strrev($inputNumber);
+            echo "<h2>Reverse of $inputNumber is: $reversedNumber</h2>";
+        }
+    ?>
+
+4a.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+</head>
+<body>
+
+    <h2>Check Palindrome</h2>
+
+    <form method="post" action="">
+        <label for="number">Enter a Number:</label>
+        <input type="text" name="number" required>
+        <input type="submit" name="submit" value="Check Palindrome">
+    </form>
+
+    <?php
+        function isPalindrome($number) {
+            $originalNumber = $number;
+            $reversedNumber = intval(strrev((string)$number));
+
+            return $originalNumber == $reversedNumber;
+        }
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $inputNumber = isset($_POST["number"]) ? $_POST["number"] : null;
+
+            if (is_numeric($inputNumber)) {
+                if (isPalindrome($inputNumber)) {
+                    echo "<p>$inputNumber is a palindrome.</p>";
+                } else {
+                    echo "<p>$inputNumber is not a palindrome.</p>";
+                }
+            } else {
+                echo "<p>Please enter a valid numeric value.</p>";
+            }
+        }
+    ?>
+
+</body>
+</html>
+
+4b.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODD or EVEN Checker</title>
+</head>
+<body>
+
+    <h2>Enter a Number</h2>
+
+    <form method="post" action="">
+        <label>Number:</label>
+        <input type="number" name="number" required>
+        <input type="submit" name="submit" value="Check ODD/EVEN">
+    </form>
+
+</body>
+</html>
+
+<?php
+        if (isset($_POST["submit"])) {
+            $inputNumber = $_POST["number"];
+                if ($inputNumber % 2 == 0) {
+                    echo "<h2>$inputNumber is an EVEN number.</h2>";
+                } else {
+                    echo "<h2>$inputNumber is an ODD number.</h2>";
+                }
+        }
+    ?>
+
+5a.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input and Output Devices</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Input and Output Devices</h1>
+
+    <h2>Input Devices:</h2>
+    <ul>
+        <li>Keyboard</li>
+        <li>Mouse</li>
+        <li>Webcam</li>
+        <li>Microphone</li>
+        <!-- Add more input devices as needed -->
+    </ul>
+
+    <h2>Output Devices:</h2>
+    <ul>
+        <li>Monitor</li>
+        <li>Printer</li>
+        <li>Speakers</li>
+        <li>Headphones</li>
+        <!-- Add more output devices as needed -->
+    </ul>
+
+</body>
+</html>
+
+5b.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Array Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>2D Array Display</h2>
+
+    <?php
+        // Create a 2D array (3x3)
+        $twoDArray = array(
+            array(1, 2, 3),
+            array(4, 5, 6),
+            array(7, 8, 9)
+        );
+
+        // Display the contents using a foreach loop
+        echo "<table>";
+        foreach ($twoDArray as $row) {
+            echo "<tr>";
+            foreach ($row as $value) {
+                echo "<td>$value</td>";
+            }
+            echo "</tr>";
+        }
+        echo "</table>";
+    ?>
+
+</body>
+</html>
+
+6a.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student ID Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .id-card {
+            width: 300px;
+            border: 2px solid #333;
+            padding: 10px;
+            text-align: center;
+            margin: auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        h2, p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="id-card">
+        <img src="university_logo.png" alt="University Logo">
+        <h2>Student ID Card</h2>
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Student ID:</strong> U123456</p>
+        <p><strong>Department:</strong> Computer Science</p>
+        <p><strong>Batch:</strong> 2024</p>
+        <p><strong>Valid Until:</strong> December 31, 2024</p>
+    </div>
+
+</body>
+</html>
+
+6b.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+</head>
+<body>
+
+    <h2>Generate Fibonacci Series</h2>
+
+    <form method="post" action="">
+        <label>Enter the number of terms:</label>
+        <input type="number" name="term" required>
+        <input type="submit" name="submit" value="Generate Fibonacci Series">
+    </form>
+
+</body>
+</html>
+
+    <?php
+        function generateFibonacci($n) {
+            $fibonacciSeries = array();
+            $first = 0;
+            $second = 1;
+
+            for ($i = 0; $i < $n; $i++) {
+                $fibonacciSeries[] = $first;
+                $temp = $first;
+                $first = $second;
+                $second = $temp + $second;
+            }
+
+            return $fibonacciSeries;
+        }
+
+        if (isset($_POST["submit"])) {
+            $numberOfTerms = $_POST["term"];
+
+            if ($numberOfTerms > 0) {
+                $fibonacciSeries = generateFibonacci($numberOfTerms);
+                echo "<h2>Fibonacci Series:</h2>";
+                echo "<p>" . implode(", ", $fibonacciSeries) . "</p>";
+            } else {
+                echo "<p>Please enter a valid positive integer.</p>";
+            }
+        }
+    ?>
+
+7a.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="" method="post">
+        <h2>User Registration Form</h2>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <button type="submit" name="submit">Register</button>
+    </form>
+
+</body>
+</html>
+
+<?php
+if (isset($_POST["submit"])) {
+    $fullName = $_POST["fullName"];
+    $email = $POST["email"];
+    $password = $_POST["password"];
+    $confirmPassword = $_POST["confirmPassword"];
+    echo "Full Name: $fullName<br>";
+    echo "Email: $email<br>";
+    echo "Password: $password<br>";
+    echo "Confirm Password: $confirmPassword<br>";
+    }
+?>
+
+7b.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Checker</title>
+</head>
+<body>
+
+    <h2>Check if a Number is Prime</h2>
+
+    <form method="post" action="">
+        <label>Enter a Number:</label>
+        <input type="number" name="number" required>
+        <input type="submit" name="submit" value="Check Prime">
+    </form>
+
+</body>
+</html>
+
+<?php
+        function isPrime($num) {
+            if ($num <= 1) {
+                return false;
+            }
+            for ($i = 2; $i <= sqrt($num); $i++) {
+                if ($num % $i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        if (isset($_POST["submit"])) {
+            $inputNumber = $_POST["number"];
+
+            if ($inputNumber > 0) {
+                if (isPrime($inputNumber)) {
+                    echo "<h2>$inputNumber is a Prime number.</h2>";
+                } else {
+                    echo "<h2>$inputNumber is a Non-Prime number.</h2>";
+                }
+            } else {
+                echo "<p>Please enter a valid positive integer greater than 0.</p>";
+            }
+        }
+    ?>
+
+8a.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Largest of Two Numbers</title>
+    <form acion="" method="post">
+    <label>Enter first number: </label>
+    <input type="number" name="fnumber" required><br><br>
+    <label>Enter second number: </label>
+    <input type="number" name="snumber" required><br><br>
+    <input type="submit" name="submit">
+    </form>
+</head>
+<body>
+
+    <?php
+        function findLargest($num1, $num2) {
+            function validateNumber($num) {
+                return is_numeric($num);
+            }
+
+            if (validateNumber($num1) && validateNumber($num2)) {
+                return ($num1 > $num2) ? $num1 : $num2;
+            } else {
+                return "Invalid input. Please enter numeric values.";
+            }
+        }
+
+		if (isset($_POST['submit'])) {
+        	$number1 = $_POST['fnumber'];
+        	$number2 = $_POST['snumber'];
+        	$result = findLargest($number1, $number2);
+        	echo "<h2>The largest value between $number1 and $number2 is: $result</h2>";
+       	}
+    ?>
+
+</body>
+</html>
+
+8b.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks</title>
+</head>
+<body>
+
+    <?php
+        // Create an Associative Array of student names and marks
+        $studentMarks = array(
+            "John" => array(85, 90, 92),
+            "Alice" => array(78, 88, 95),
+            "Bob" => array(92, 85, 89),
+            // Add more students as needed
+        );
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $selectedStudent = isset($_POST["student"]) ? $_POST["student"] : "";
+
+            if (!empty($selectedStudent) && array_key_exists($selectedStudent, $studentMarks)) {
+                $marks = $studentMarks[$selectedStudent];
+                $totalMarks = array_sum($marks);
+
+                echo "<h2>Student: $selectedStudent</h2>";
+                echo "<p>Marks: " . implode(", ", $marks) . "</p>";
+                echo "<p>Total Marks: $totalMarks</p>";
+            } else {
+                echo "<p>Please select a valid student name.</p>";
+            }
+        }
+    ?>
+
+    <h2>Select a Student</h2>
+
+    <form method="post" action="#">
+        <label for="student">Choose a student:</label>
+        <select name="student" id="student">
+            <?php
+                foreach ($studentMarks as $name => $marks) {
+                    echo "<option value=\"$name\">$name</option>";
+                }
+            ?>
+        </select>
+        <input type="submit" name="submit" value="Show Total Marks">
+    </form>
+
+</body>
+</html>
+
+9a.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            max-width: 300px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="post">
+        <h2>Mathematical Calculator</h2>
+        <label for="num1">Number 1:</label>
+        <input type="text" id="num1" name="num1" required>
+
+        <label for="operator">Operation:</label>
+        <select name="operator" id="operator" required>
+            <option value="+">Addition (+)</option>
+            <option value="-">Subtraction (-)</option>
+            <option value="*">Multiplication (*)</option>
+            <option value="/">Division (/)</option>
+        </select><br>
+
+        <label for="num2">Number 2:</label>
+        <input type="text" id="num2" name="num2" required>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $num1 = isset($_POST["num1"]) ? $_POST["num1"] : "";
+            $num2 = isset($_POST["num2"]) ? $_POST["num2"] : "";
+            $operator = isset($_POST["operator"]) ? $_POST["operator"] : "";
+
+            if (is_numeric($num1) && is_numeric($num2)) {
+                switch ($operator) {
+                    case "+":
+                        $result = $num1 + $num2;
+                        break;
+                    case "-":
+                        $result = $num1 - $num2;
+                        break;
+                    case "*":
+                        $result = $num1 * $num2;
+                        break;
+                    case "/":
+                        if ($num2 != 0) {
+                            $result = $num1 / $num2;
+                        } else {
+                            $result = "Cannot divide by zero";
+                        }
+                        break;
+                    default:
+                        $result = "Invalid operator";
+                }
+
+                echo "<h3>Result: $result</h3>";
+            } else {
+                echo "<p>Please enter valid numeric values.</p>";
+            }
+        }
+    ?>
+
+</body>
+</html>
+
+9b. Same as 4a 
+
+10a. Same as 3a
+
+10b.
+<?php
+// Database connection details
+$servername = "your_server_name";
+$username = "your_username";
+$password = "your_password";
+$database = "users";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
+
+11a.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Digits</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            max-width: 300px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $number = isset($_POST["number"]) ? $_POST["number"] : 0;
+
+            if (is_numeric($number) && $number >= 0) {
+                $sum = 0;
+                $numberString = (string)$number;
+
+                for ($i = 0; $i < strlen($numberString); $i++) {
+                    $sum += intval($numberString[$i]);
+                }
+
+                echo "<h2>Sum of Digits for $number is: $sum</h2>";
+            } else {
+                echo "<p>Please enter a valid non-negative integer.</p>";
+            }
+        }
+    ?>
+
+    <form method="post" action="#">
+        <h2>Calculate Sum of Digits</h2>
+        <label for="number">Enter a non-negative integer:</label>
+        <input type="text" id="number" name="number" required>
+        <button type="submit">Calculate</button>
+    </form>
+
+</body>
+</html>
+
+11b. Same as 4a
+
+12a.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest Among Three Numbers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            max-width: 300px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $num1 = isset($_POST["num1"]) ? $_POST["num1"] : 0;
+            $num2 = isset($_POST["num2"]) ? $_POST["num2"] : 0;
+            $num3 = isset($_POST["num3"]) ? $_POST["num3"] : 0;
+
+            $largest = ($num1 >= $num2 && $num1 >= $num3) ? $num1 : (($num2 >= $num1 && $num2 >= $num3) ? $num2 : $num3);
+
+            echo "<h2>The largest number is: $largest</h2>";
+        }
+    ?>
+
+    <form method="post" action="#">
+        <h2>Find Largest Among Three Numbers</h2>
+        <label for="num1">Number 1:</label>
+        <input type="text" id="num1" name="num1" required>
+
+        <label for="num2">Number 2:</label>
+        <input type="text" id="num2" name="num2" required>
+
+        <label for="num3">Number 3:</label>
+        <input type="text" id="num3" name="num3" required>
+
+        <button type="submit">Find Largest</button>
+    </form>
+
+</body>
+</html>
+
+12b.
+
+Note: You have to run this on php server like apache2 or xampp
+
+registration_form.php
+---------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $name = isset($_POST["name"]) ? $_POST["name"] : "";
+            $email = isset($_POST["email"]) ? $_POST["email"] : "";
+            $course = isset($_POST["course"]) ? $_POST["course"] : "";
+
+            // You can perform additional validation and store the data in a database
+
+            // Redirect to another page to display the submitted data
+            header("Location: display_data.php?name=$name&email=$email&course=$course");
+            exit();
+        }
+    ?>
+
+    <form method="post" action="#">
+        <h2>Student Registration Form</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="course" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
+
+display_form.php
+----------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Submitted Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        div {
+            max-width: 400px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h2>Submitted Data</h2>
+        <?php
+            $name = isset($_GET["name"]) ? $_GET["name"] : "";
+            $email = isset($_GET["email"]) ? $_GET["email"] : "";
+            $course = isset($_GET["course"]) ? $_GET["course"] : "";
+
+            echo "<p><strong>Name:</strong> $name</p>";
+            echo "<p><strong>Email:</strong> $email</p>";
+            echo "<p><strong>Course:</strong> $course</p>";
+        ?>
+    </div>
+
+</body>
+</html>

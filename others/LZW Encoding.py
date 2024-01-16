@@ -16,7 +16,7 @@ for i in n:
 
 i, j = 0, 1
 # Pattern insertion from string
-while j < len(n):
+while j <= len(n):
     if n[i:j] not in patrn:
         patrn.append(n[i:j])
         pri_count += 1
@@ -46,3 +46,10 @@ print()
 print('index        : ',end='')
 for i in index:
     print(i,end=' ')
+
+'''
+Enter string : ababbabcababba
+pattern      : a b c ab ba abb bab bc ca aba 
+primary index: 1 2 3 4  5  6   7   8  9  10 
+index        : 0 0 0 1  2  4   5   2  3  4
+'''

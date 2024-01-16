@@ -23,7 +23,7 @@ while j <= len(n):
         pri_index.append(pri_count)
         i += len(n[i:j])-1
         j += 1
-    else:
+    else:						#n[i:j] is in patrn then we just increase the length of n[i:j]
         j += 1
 
 # Dictionary for mapping pattern and primary index
@@ -49,7 +49,7 @@ for i in index:
 
 '''
 Enter string : ababbabcababba
-pattern      : a b c ab ba abb bab bc ca aba 
-primary index: 1 2 3 4  5  6   7   8  9  10 
-index        : 0 0 0 1  2  4   5   2  3  4
+pattern      : a b c ab ba abb bab bc ca aba abba
+primary index: 1 2 3 4  5  6   7   8  9  10  11
+index        : 0 0 0 1  2  4   5   2  3  4   6
 '''

@@ -236,7 +236,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reverse Number Calculator</title>
+    <title>Reverse Number</title>
 </head>
 <body>
 
@@ -244,7 +244,7 @@
 
     <form method="post" action="">
         <label>Number:</label>
-        <input type="text" name="number" required>
+        <input type="number" name="number" required>
         <input type="submit" name="submit" value="Calculate Reverse">
     </form>
 
@@ -252,9 +252,18 @@
 </html>
 
     <?php
+		function reverseNumber($num) {
+			$tmp = 0;
+			while($num > 0) {
+				$tmp = ($tmp * 10) + ($num % 10);
+				$num = (int)$num / 10;
+			}
+			return $tmp;
+		}
+
         if (isset($_POST["submit"])) {
             $inputNumber = $_POST["number"];
-            $reversedNumber = strrev($inputNumber);
+            $reversedNumber = reverseNumber($inputNumber);
             echo "<h2>Reverse of $inputNumber is: $reversedNumber</h2>";
         }
     ?>
@@ -272,15 +281,19 @@
     <h2>Check Palindrome</h2>
 
     <form method="post" action="">
-        <label for="number">Enter a Number:</label>
-        <input type="text" name="number" required>
+        <label>Enter a Number:</label>
+        <input type="number" name="number" required>
         <input type="submit" name="submit" value="Check Palindrome">
     </form>
 
     <?php
         function isPalindrome($number) {
             $originalNumber = $number;
-            $reversedNumber = intval(strrev((string)$number));
+            $reversedNumber = 0;
+            while($number > 0) {
+				$reversedNumber = ($reversedNumber * 10) + ($number % 10);
+				$number = (int)$number / 10;
+            }
 
             return $originalNumber == $reversedNumber;
         }
@@ -686,11 +699,11 @@ if (isset($_POST["submit"])) {
         }
 
 		if (isset($_POST['submit'])) {
-        	$number1 = $_POST['fnumber'];
-        	$number2 = $_POST['snumber'];
-        	$result = findLargest($number1, $number2);
-        	echo "<h2>The largest value between $number1 and $number2 is: $result</h2>";
-       	}
+			$number1 = $_POST['fnumber'];
+			$number2 = $_POST['snumber'];
+			$result = findLargest($number1, $number2);
+			echo "<h2>The largest value between $number1 and $number2 is: $result</h2>";
+		}
     ?>
 
 </body>
@@ -851,7 +864,7 @@ if (isset($_POST["submit"])) {
 </body>
 </html>
 
-9b. Same as 4a 
+9b. Same as 4a
 
 10a. Same as 3a
 

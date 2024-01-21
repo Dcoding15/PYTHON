@@ -1,6 +1,6 @@
 from openai import OpenAI
 
-gpt = OpenAI(api_key='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')	# Insert OpenAI api key
+gpt = OpenAI(api_key='')	# Insert OpenAI api key
 
 prmpt = str(input('Enter message: '))
 

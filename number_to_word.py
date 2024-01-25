@@ -6,35 +6,31 @@ word = {0:'', 1:'ONE ', 2:'TWO ', 3:'THREE ', 4:'FOUR ', 5:'FIVE ', 6:'SIX ', 7:
 
 def t1():
     l = len(n)
-    return word[int(n[l-1])]
+    return word[int(n[l-1])]	#ones position of number
 
 def t2():
     l = len(n)
     if int(n[l-2]) > 1:
-        return word[int(n[l-2])*10] + word[int(n[l-1])]
+        return word[int(n[l-2])*10] + word[int(n[l-1])]		#tens position of number
     elif int(n[l-2]) == 0:
     	return t1()
     else:
 	    return word[int(n[l-2:])]
 #------------------------------------------------------------
+
 def tmp1(s):
     l = len(s)
     return word[int(s[l-1])]
 
 def tmp2(s):
-    l = len(s)
-    if l == 2:
-    	if int(s[l-2]) >= 1:
-        	return word[int(s[l-2])*10] + word[int(s[l-1])]
-    	elif int(s[l-2]) == 0:
-        	    return tmp1(s)
-    elif l == 1:
-    	if int(s[l-1]) >= 1:
-    		return word[int(s[l-1])]
-    	elif int(s[l-1]) == 0:
-    		return tmp1(s)
-    elif l == 3:
-    	return word[int(s[l-2:])]
+	l = len(s)
+	if int(s[l-2]) > 1:
+		return word[int(s[l-2])*10] + word[int(s[l-1])]
+	elif int(s[l-2]) == 0:
+		return tmp1(s)
+	else:
+		return word[int(s[l-2:])]
+
 #------------------------------------------------------------
 def t3():
     l = len(n)

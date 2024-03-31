@@ -1,4 +1,4 @@
-STEP 1: install python3 virtual environment
-STEP 2: python3 -m venv [folder name]
-STEP 3 (run python virtual environment): source [folder name]/bin/activate
-STEP 4(stop python virtual environment): deactivate
+STEP 1 (Install python virtual environment package) : sudo apt install python3-virtualenv
+STEP 2 (Create folder for pip packages to store)    : python3 -m venv [folder name]
+STEP 3 (run python virtual environment)             : source [folder name]/bin/activate
+STEP 4 (stop python virtual environment)            : deactivate

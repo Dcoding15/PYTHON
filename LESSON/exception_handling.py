@@ -6,70 +6,70 @@ Exception Hirarchy: -
 BaseException
  +-- BaseExceptionGroup
  +-- GeneratorExit
- +-- KeyboardInterrupt
- +-- SystemExit
- +-- Exception
+ +-- KeyboardInterrupt (Ctrl + C which exit program between execution)
+ +-- SystemExit (used to immediately terminate the program)
+ +-- Exception (Base class for all exceptions)
       +-- ArithmeticError
-      |    +-- FloatingPointError
-      |    +-- OverflowError
-      |    +-- ZeroDivisionError
-      +-- AssertionError
-      +-- AttributeError
-      +-- BufferError
-      +-- EOFError
+      |    +-- FloatingPointError (floating point calculation fails)
+      |    +-- OverflowError (result of numeric calculation is too large)
+      |    +-- ZeroDivisionError (second operand in a division is zero)
+      +-- AssertionError (assert statement fails)
+      +-- AttributeError (attirbute assignment fails)
+      +-- BufferError (issue with the buffer protocol)
+      +-- EOFError (input() method hits end of line condition)
       +-- ExceptionGroup [BaseExceptionGroup]
       +-- ImportError
-      |    +-- ModuleNotFoundError
+      |    +-- ModuleNotFoundError (import module which doesn't exits)
       +-- LookupError
-      |    +-- IndexError
-      |    +-- KeyError
-      +-- MemoryError
+      |    +-- IndexError (trying to access out of range index of an iteration)
+      |    +-- KeyError (trying to access using a key which don't exits)
+      +-- MemoryError (system runs out of memory)
       +-- NameError
-      |    +-- UnboundLocalError
+      |    +-- UnboundLocalError (trying to access local variable before assignment of a value)
       +-- OSError
-      |    +-- BlockingIOError
-      |    +-- ChildProcessError
+      |    +-- BlockingIOError (delay or waiting in I/O operations)
+      |    +-- ChildProcessError (issues arise due to subprocesses)
       |    +-- ConnectionError
-      |    |    +-- BrokenPipeError
-      |    |    +-- ConnectionAbortedError
-      |    |    +-- ConnectionRefusedError
-      |    |    +-- ConnectionResetError
-      |    +-- FileExistsError
-      |    +-- FileNotFoundError
-      |    +-- InterruptedError
-      |    +-- IsADirectoryError
-      |    +-- NotADirectoryError
-      |    +-- PermissionError
-      |    +-- ProcessLookupError
-      |    +-- TimeoutError
-      +-- ReferenceError
+      |    |    +-- BrokenPipeError (closed end during writing a socket connection)
+      |    |    +-- ConnectionAbortedError (connection is forcely terminated by client only)
+      |    |    +-- ConnectionRefusedError (connection is refused by network host)
+      |    |    +-- ConnectionResetError (connection is forcely terminated by host only)
+      |    +-- FileExistsError (trying to create existing file / folder)
+      |    +-- FileNotFoundError (accessing file which don't exists)
+      |    +-- InterruptedError (system call is interrupted by signal)
+      |    +-- IsADirectoryError (accessing folder instead of expecting file)
+      |    +-- NotADirectoryError (accessing file instead of expecting folder)
+      |    +-- PermissionError (don't any enough permission to access / modify to file / folder)
+      |    +-- ProcessLookupError (given process don't exists)
+      |    +-- TimeoutError (exceeds specified time limit)
+      +-- ReferenceError (same as NameError or AttributeError)
       +-- RuntimeError
-      |    +-- NotImplementedError
-      |    +-- RecursionError
-      +-- StopAsyncIteration
-      +-- StopIteration
+      |    +-- NotImplementedError (operation or method is not supported or implemented)
+      |    +-- RecursionError (recursion can't reach base case to terminate)
+      +-- StopAsyncIteration (signal end of asynchronous iteration)
+      +-- StopIteration (signal end of synchronous iteration)
       +-- SyntaxError
-      |    +-- IndentationError
-      |         +-- TabError
-      +-- SystemError
-      +-- TypeError
-      +-- ValueError
+      |    +-- IndentationError (issue indentation of code)
+      |         +-- TabError (issue with mixing of tabs and spaces)
+      +-- SystemError (interpreter encounters an internal error)
+      +-- TypeError (trying to perform unsupported operation for given type of object)
+      +-- ValueError (receive argument with correct type but inappropriate value)
       |    +-- UnicodeError
-      |         +-- UnicodeDecodeError
-      |         +-- UnicodeEncodeError
-      |         +-- UnicodeTranslateError
+      |         +-- UnicodeDecodeError (issue decoding byte sequence into unicode string)
+      |         +-- UnicodeEncodeError (issue encoding unicode string into byte sequence)
+      |         +-- UnicodeTranslateError (when unicode character couldn't mapped)
       +-- Warning
-           +-- BytesWarning
-           +-- DeprecationWarning
-           +-- EncodingWarning
-           +-- FutureWarning
-           +-- ImportWarning
-           +-- PendingDeprecationWarning
-           +-- ResourceWarning
-           +-- RuntimeWarning
-           +-- SyntaxWarning
-           +-- UnicodeWarning
-           +-- UserWarning
+           +-- BytesWarning (indicate bytes object operation is used)
+           +-- DeprecationWarning (indicate deprecated feature will remove in future release)
+           +-- EncodingWarning (issue with encoding and decoding format)
+           +-- FutureWarning (behaviour that will change in future release)
+           +-- ImportWarning (deprecated usage of imports)
+           +-- PendingDeprecationWarning (feature supported but removed in future release)
+           +-- ResourceWarning (indicate a resource hasn't been properly closed or released)
+           +-- RuntimeWarning (runtime behaviour)
+           +-- SyntaxWarning (unusual syntax)
+           +-- UnicodeWarning (issue with unicode string and encoding / decoding)
+           +-- UserWarning (user-defined warning)
 
 Types of Exception: -
 ------------------

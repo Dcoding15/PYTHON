@@ -13,11 +13,11 @@ def rescaling(content, scale):  # Content -> contain binary data | scale -> cont
     return rescaled_content
 
 # Rescaling Image
-'''
+
 img = cv2.imread('demo.jpg')
-img = rescaling(img, 0.85)
+img = rescaling(img, 0.225)
 cv2.imshow('Rescaled Image', img)
-'''
+
 
 #Rescaling Video
 '''

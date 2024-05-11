@@ -1,0 +1,29 @@
+Django Tutorial: -
+---------------
+
+Create django project: django-admin startproject [project name]
+
+Inside django project: -
+[project name]/
+    manage.py
+    [project name]/
+        __init__.py
+        asgi.py
+        settings.py
+        urls.py
+        wsgi.py
+
+Run Django Project: python3.11 manage.py runserver
+
+Create django app: python3.11 manage.py startapp [app name]
+[app name]/
+	migrations/
+		__init__.py
+	__init__.py
+	admin.py
+	apps.py
+	models.py
+	tests.py
+	views.py
+
+Django Views: These are python functions that takes and returns http request and repsonse respectively .

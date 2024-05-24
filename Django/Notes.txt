@@ -16,6 +16,8 @@ Inside django project: -
 Run Django Project: python3.11 manage.py runserver
 
 Create django app: python3.11 manage.py startapp [app name]
+
+Inside django app: -
 [app name]/
 	migrations/
 		__init__.py
@@ -26,4 +28,26 @@ Create django app: python3.11 manage.py startapp [app name]
 	tests.py
 	views.py
 
-Django Views: These are python functions that takes and returns http request and repsonse respectively .
+Run Django migrate: python3.11 manage.py migrate
+Create Django database: python3.11 manage.py makemigrations [app name]
+Create SQLite database: python3.11 manage.py sqlmigrate [app name] [django database number]
+Open Django shell: python3.11 manage.py shell
+
+Django Views: File stores python functions that takes and returns http request and repsonse respectively.
+Django Urls: File that used to create route for django views.py functions.
+Django Templates: Folder have to create within django app, which is used to store html files for django web.
+Django Models: It is a table in a database. Where data is created in objects.
+
+Jinja Template Syntax: -
+---------------------
+{% ... %}    ->   Perform opertions like condition, loop, etc.
+{{ ... }}    ->   Display data from python file to html file.
+
+
+Django app tutorial: -
+-------------------
+Step 1: Create http request and response function in [app name]/views.py .
+Step 2: Go to [project name]/urls.py then import functions from [app name]/views.py and add to path function.
+Step 3: Create templates folder, then create first.html . Then render html file from views.py .
+Step 4: Go to [project name]/settings.py then append [app name] into INSTALLED_APPS.
+Step 5: Go to [app name]/models.py then modify changes

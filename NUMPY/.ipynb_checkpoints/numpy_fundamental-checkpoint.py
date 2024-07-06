@@ -132,10 +132,3 @@ print(a2.shape)
 a3 = a2.copy()
 a3 = a3.reshape(-1)
 print(a3.shape)
-
-# Iterate Array
-# Using nditer() traverse and access each element of N dimensional array.
-# We can use slicing within nditer()
-# Using ndnumerate() traverse and access each element and index of N dimensional array.
-for i in nditer(a2):
-    print(i)

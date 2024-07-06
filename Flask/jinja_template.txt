@@ -1,5 +1,3 @@
-'''
-
 {% ... %} --> conditonal and loop statements
 {{ ... }} --> expressions to print template output
 {# ... #} --> comments
@@ -43,4 +41,3 @@ Linking CSS and JS external file: -
     (ii) Make CSS file under 'static/css' folder and JS file under 'static/js' folder.
     (iii) To add CSS file add this statement into that HTML file: <link rel="stylesheet" href="{{ url_for('static',filename='css/[file name].css') }}">
           To add JS file add this statement into that HTML file: <script src="{{ url_for('static',filename='js/[file name].css') }}">
-'''

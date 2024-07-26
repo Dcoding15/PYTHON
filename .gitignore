@@ -1,6 +1,1 @@
-Django/demo_project/demo_app_1/__init__.py
-Django/demo_project/demo_app_1/migrations/
-Django/demo_project/demo_project/__init__.py
-Django/demo_project/demo_project/__pycache__/
-Django/demo_project/db.sqlite3
-Django/demo_project/demo_app_1/__pycache__/
+FASTAPI/__pycache__/

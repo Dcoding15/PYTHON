@@ -1,6 +1,4 @@
-#! /usr/bin/python3
-
-import pymongo as pym
+import pymongo
 
 '''
 cli = pym.MongoClient('mongodb://127.0.0.1:27017/')		#making server client connection (Default URL: mongodb://127.0.0.1:27017/)

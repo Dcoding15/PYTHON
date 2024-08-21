@@ -47,4 +47,35 @@ arr7 = np.divmod(b,a)
 # Absolute Values
 arr8_1 = np.absolute(a)
 arr8_2 = np.absolute(b)
-print(arr1,arr2,arr3,arr4,arr5,arr6,arr7,arr8_1,arr8_2,sep="\n")
+# Reciprocal
+arr9 = np.reciprocal(a)
+print(arr1,arr2,arr3,arr4,arr5,arr6,arr7,arr8_1,arr8_2,arr9,sep="\n")
+
+# Rounding Decimals
+# Turncation - return fractional part to zero
+a = np.trunc([3.1666, 3.6667])
+b = np.fix([3.1666, 3.6667])
+print(a,b,sep='\n')
+
+# Rounding - increment by 1 if fractional part is greater than and equal to 5.
+a = np.around([3.1666, 3.6667])
+print(a)
+
+# Floor - return largest integer which is less than or equal to number
+a = np.floor([3.7, -1.2])
+print(a)
+
+# Ceil - return smallest integer which is greater than or equal to number
+a = np.ceil([3.7, -1.2])
+print(a)
+
+# Logs
+a = 5
+# Log at base 2
+print(np.log2(a))
+
+# Log at base 10
+print(np.log10(a))
+
+# Log at base e (Natural Log)
+print(np.log(a))

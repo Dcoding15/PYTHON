@@ -2,19 +2,19 @@
 import numpy.random as rd
 import numpy as np
 '''
-√ -> 221a (Square root)
-σ -> 03c3 (Standard Deviation)
-μ -> 03bc (Mean)
-π -> 03c0 (Pi)                                  ~3.14159
-e -> base of natural logirithm      ~2.71828
-∞ -> 221e (Infinite)
-p -> probability of success on single trail
-q -> probability of failure on single trail
-n     -> number of trails
-x     -> number of times event occus
-λ     -> 03bb (Lambda) (rate of occurance of events)
-α     -> 03b1 (Alpha) (shape parameter)
-xm  -> minimum possible positive value of x
+√ 	-> 221a (Square root)
+σ 	-> 03c3 (Standard Deviation)
+μ 	-> 03bc (Mean)
+π 	-> 03c0 (Pi)                                 	~3.14159
+e 	-> base of natural logirithm      				~2.71828
+∞ 	-> 221e (Infinite)
+p 	-> probability of success on single trail
+q 	-> probability of failure on single trail
+n 	-> number of trails
+x   -> number of times event occus
+λ   -> 03bb (Lambda) (rate of occurance of events)
+α   -> 03b1 (Alpha) (shape parameter)
+xm	-> minimum possible positive value of x
 '''
 
 '''
@@ -41,6 +41,7 @@ Uniform Distribution: -
     f(x) = 1 / (b-a)      [If a <= x <= b]
 
 Logistic Distribution: -
+	Event with how much item we have and how much time it needed to 
 
 Multinomial Distribution: -
     Event with 2 or more outcomes

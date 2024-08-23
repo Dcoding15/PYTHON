@@ -2,62 +2,71 @@
 import numpy.random as rd
 import numpy as np
 '''
-√ 	-> 221a (Square root)
-σ 	-> 03c3 (Standard Deviation)
-μ 	-> 03bc (Mean)
-π 	-> 03c0 (Pi)                                 	~3.14159
-e 	-> base of natural logirithm      				~2.71828
-∞ 	-> 221e (Infinite)
-p 	-> probability of success on single trail
-q 	-> probability of failure on single trail
-n 	-> number of trails
-x   -> number of times event occus
-λ   -> 03bb (Lambda) (rate of occurance of events)
-α   -> 03b1 (Alpha) (shape parameter)
-xm	-> minimum possible positive value of x
-'''
-
-'''
 Random Number: Number that can't be predicted logically.
 Pseudo Random: It generate through a geneartion algorithm.
 Radmon Distribution: It is a set of random numbers that follow a certain probability density function.
 Probability Density Function: A function that describes  a continuous probability.
 Random Permutation: It refers to random arrangement of elements.
 
-Normal(Gaussian) Distribution: -
-    Event with limited range and infinite outcomes
-    f(x) = (1/σ√2π) * e ^ (-0.5 * ((x-μ)/σ) ^ 2)
+Normal(Gaussian) Distribution: Event with limited range and infinite outcomes
+    loc - (Mean) where peak of the bell exits
+	scale - (Standard Deviation) flatness of distribution
+	size - shape of array
+	random.normal(loc=, scale=, size=)
 
-Binomial Distribution: -
-    Event with 2 outcomes
-    P(x) = C(n,x) * (p ^ x) * (q ^ (n-x))
+Binomial Distribution: Event with 2 outcomes
+    n - no. of trails
+	p - probablity of occurance of each trial
+	size - shape of array
+	random.binomial(n=, p=, size=)
 
-Poisson Distribution: -
-    Event with limited time of finite outcomes
-    P(x) = ((e ^ -λ) * (λ ^ x)) / factorial(x)
+Poisson Distribution: Event with limited time of finite outcomes
+    lam - no. of occurance
+	size - shape of array
+	random.poisson(lam=, size=)
 
-Uniform Distribution: -
-    Event with equal intervals of outcomes (between upper and lower bound)
-    f(x) = 1 / (b-a)      [If a <= x <= b]
+Uniform Distribution: Event with equal intervals of outcomes (between upper and lower bound)
+	a - lower bound, default value is 0.0
+	b - upper bound, default value is 1.0
+	size - shape of array
+	random.uniform(a=, b=, size=)
 
-Logistic Distribution: -
-	Event with how much item we have and how much time it needed to 
+Logistic Distribution: Event with limited range and progressive outcomes
+	loc - (Mean) where peak of the bell exits
+	scale - (Standard Deviation) flatness of distribution
+	size - shape of array
+	random.logistic(loc=, scale=, size=)
 
-Multinomial Distribution: -
-    Event with 2 or more outcomes
-    P(x) = (n! / (x1! . . . xk!))
+Multinomial Distribution: Event with 2 or more outcomes
+	n - no. of possible outcomes
+	pvals - list of possible outcomes
+	size - shape of array
+	random.multinominal(n=, pvals=, size=)
 
-Exponential Distribution: -
+Exponential Distribution: Event with
+	scale - inverse rate of lam in poisson
+	size - shape of array
+	random.exponential(scale=, size=)
 
-Chi Square Distribution: -
+Chi Square Distribution: Measure observed events differ from expected events
+	df - degree of freedom
+	size - shape of array
+	random.chisquare(df=, size=)
 
-Rayleigh Distribution: -
+Rayleigh Distribution: Event occurrence based on variable magnitude outcomes
+	scale - (Standard Deviation) flatness of distribution
+	size - shape of array
+	random.rayleigh(scale=, size=)
 
-Pareto Distribution: -
-    Event where 80% of effect come from 20% of causes
-    f(x) = (α * (xm ^ α))/(x^(α+1))        [If x >= xm]
+Pareto Distribution: Events occurs with varying frequiences
+	a - shape parameter
+	size - shape of array
+	random.pareto(a=, size=)
 
-Zipf Distribution: -
+Zipf Distribution: Sample data is based on zipf's law
+	a - distribution parameter
+	size - shape of array
+	random.zipf(a=, size=)
 '''
 
 # Generate Random Integer

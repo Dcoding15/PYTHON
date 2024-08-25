@@ -1,0 +1,15 @@
+Machine Learning = Code + Data -> Algorithm
+
+Types of Machine Learning: -
+    1. Supervised           (problem has both input and output column)
+        a. Regression       (output column is numerical)
+        b. Classification   (output column is categorical)
+    2. Unsupervised                     (problem has only input column)
+        a. Clustering                   (input column is grouped on various categories)
+        b. Dimensionality Reduction     (input column is grouped into reduced columns)
+        c. Anamoly Detection            (input column is detected large difference between amooung its data)
+        d. Association Rule Learning    (input column has between its data)   
+    3. Semisupervised   (problem has labeled input column)
+    4. Reinforcement    (problem has agent learn through negative and positive rewards and updating its own policies)
+    5. Instance Based Learning  (remembering each time when learning something new except learning rule)
+    6. Model Based Learning     (learning rule or generalising each time when learning something new instead of remembering or storing data)

@@ -1,0 +1,90 @@
+Data Types: -
+----------
+    1. There are three types of main categories: -
+        a. Numerical - there are two types of numerical categories
+            i) Discreate Data
+            ii) Continuous Data
+        b. Categorial - values can't be measured up against each other.
+        c. Ordinal - values can be measured up against each other.
+    2. Mean - Average value
+       Median - Mid point value
+       Mode - Most common value
+       Standard Deviation - Number denote how values are spread.
+       Variance - Number denote how values are spread. Square root of variance is standard deviation.
+       Percentile - Percentage values which is equal and less than.
+       Data Distribution - Describe how data points are spread in space.
+
+===============================================================================
+
+import numpy as np
+from scipy import stats as st
+import matplotlib.pyplot as plt
+
+# Mean, Median, Mode
+speed = [99,86,87,88,86,103,87,94,78,77,85,86]
+
+print("Mean value: ",np.mean(speed))
+print("Median value: ",np.median(speed))
+print("Mode value: ",st.mode(speed)[0])
+
+# Standard Deviation
+speed = [86,87,88,86,87,85,86]
+
+print("Standard Deviation: ",np.std(speed))
+
+# Variance
+speed = [32,111,138,28,59,77,97]
+
+print("Variance: ",np.var(speed))
+
+# Percentile
+ages = [5,31,43,48,50,41,7,11,15,39,80,82,32,2,8,6,25,36,27,61,31]
+
+print("Percentile: ",np.percentile(ages, 90))
+
+# Data Distribution
+x = np.random.uniform(0.0, 5.0, 250)
+
+plt.hist(x, 100)
+plt.show()
+
+# Normal Data Distribution
+x = np.random.normal(5.0, 1.0, 100000)
+
+plt.hist(x, 100)
+plt.show()
+
+# Scatter Plot
+x = np.random.normal(5.0, 1.0, 1000)
+y = np.random.normal(10.0, 2.0, 1000)
+
+plt.scatter(x, y)
+plt.show()
+
+===============================================================================
+
+import pandas as pd
+
+x = pd.read_csv('data.csv')
+
+# 7 points to understand your data
+# How big is the data ?
+print(x.shape)
+
+# How does the data look like ?
+print(x.head())
+
+# What is the data type of cols ?
+print(x.info())
+
+# Are there any missing values
+print(x.isna().sum())
+
+# How does the data look mathematically ?
+print(x.describe())
+
+# Are there any duplicate values ?
+print(x.duplicated().sum())
+
+# How is the correlation between cols ?
+print(x.corr())

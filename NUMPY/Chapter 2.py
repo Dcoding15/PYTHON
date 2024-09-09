@@ -1,4 +1,3 @@
-#!/usr/bin/python3.11
 import numpy.random as rd
 import numpy as np
 '''

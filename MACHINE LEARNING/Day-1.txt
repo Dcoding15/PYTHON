@@ -13,3 +13,22 @@ Types of Machine Learning: -
     4. Reinforcement    (problem has agent learn through negative and positive rewards and updating its own policies)
     5. Instance Based Learning  (remembering each time when learning something new except learning rule)
     6. Model Based Learning     (learning rule or generalising each time when learning something new instead of remembering or storing data)
+
+Machine Learning Development Life Cycle (MLDC): -
+    1. Frame the problem - check which type of learning is best.
+    
+    2. Gathering data - fetch data through web scraping, json api, csv file, data warehouse from running data base, etc.
+    
+    3. Data Preprocessing - modify format of fetched data to make compatiable with machine learning model.
+    4. Exploratry Data Analysis - study relationship between input and output data.
+    
+    5. Feature Engineering and Selection - selection or removing of some input data to make better 
+    learning model performance.
+    
+    6. Model Training, Evaluation and Selection - training and evaluating model using various ML algorithm. Selecting best algorithm for that specific models
+    
+    7. Model Deployment
+    
+    8. Testing
+    
+    9. Optimizing

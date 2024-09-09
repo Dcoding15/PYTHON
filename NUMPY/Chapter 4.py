@@ -1,4 +1,3 @@
-#! /usr/bin/python3.11
 import numpy as np
 
 # Zero array - array filled with only 0's element

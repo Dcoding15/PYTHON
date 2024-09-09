@@ -1,0 +1,35 @@
+EDA using Universal Analysis (This is only for single column analysis): -
+----------------------------
+1. Categorical Data
+    a. Count Plot
+    b. Pie Chart
+
+2. Numerical Data
+    a. Histogram
+    b. Distplot
+    c. Boxplot
+
+EDA using Bivariate and Multivariate (This is only for two or more column analysis): -
+------------------------------------
+1. Numerical to Numerical
+    a. Scatter Plot
+    b. Pairplot - Collection of scatter plot
+    c. Lineplot
+2. Numerical to Categorical
+    a. Bar Plot
+    b. Box Plot
+    c. Displot
+5. Categorial to Categorial
+    a. HeatMap
+    b. ClusterMap
+
+Pandas Profiler: -
+---------------
+Install pandas profiling    -> pip install pandas-profiling
+Code: -
+----
+from ydata_profiling import ProfileReport
+import pandas as pd
+df = pd.read_csv('data.csv')
+prof = ProfileReport(df)
+prof.to_file(output_file='output.html')

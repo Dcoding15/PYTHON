@@ -1,0 +1,31 @@
+Feature Enginnering: -
+-------------------
+    1. The process of using domain knowledge to extract features from raw data.
+    2. It is used to improve machine learning algorithm.
+    3. Types of feature enginnering: -
+        a. Feature Transformation - missing values impuation, handling categorical features, outlier detection, feature scaling
+        b. Feature Construction
+        c. Feature Selection
+        d. Feature Extraction
+
+Feature Scaling: -
+---------------
+    1. It is a technique to standardise the independent features present in the data in a fixed range.
+    2. There are two of feature scaling: -
+        a. Standardisation (z-score normalisation): -
+            x' = ( x[i] - mean(x) ) / standard_deviation(x)
+            where, x is numerical column of a data set
+            Range: -1 to 1
+        b. Normalisation: -
+            xi' = (xi - min(x)) / (max(x) - min(x))
+            where, x is numerical column of a data set
+            Range: 0 to 1
+
+Encode Categorical Data: -
+-----------------------
+    1. Type of categorical data: -
+        a. Nominal Data ( no relationship between data )
+        b. Ordinal Data ( relationship between data )
+    2. Types of categorical encoding: -
+        a. Ordinal Encoding (for ordinal data) (use OrdinalEncoder or LabelEncoder)
+        b. One hot Encoding (for nominal data)

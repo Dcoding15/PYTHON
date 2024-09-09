@@ -1,4 +1,3 @@
-#!/usr/bin/bash
 import numpy as np
 
 '''

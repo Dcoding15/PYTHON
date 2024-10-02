@@ -43,5 +43,7 @@ print("Tail Bydefault: -",df.tail(),sep='\n')    # head bydefault retrive data o
 print("Tail N nos.: -",df.tail(10),sep='\n')     # head N nos., where N is user input
 print("Information about dataset: -")
 data_info = df.info()                            # describle type of dataset data used
-count_null = df.isnull().sum()					 # count null values per column
-desc_dataset = df.describe()					 # perform different function
+count_null = df.isnull().sum()					         # count null values per column
+desc_dataset = df.describe()					           # perform different function
+count_dupli = df.duplicated().sum()              # count deplicated values on each column
+drop_dupli = df.drop_duplicates("column_name")   # to delete duplicate values

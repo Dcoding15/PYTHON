@@ -42,4 +42,6 @@ print("Head N nos.: -",df.head(10),sep='\n')     # head N nos., where N is user 
 print("Tail Bydefault: -",df.tail(),sep='\n')    # head bydefault retrive data of bottom 5 rows
 print("Tail N nos.: -",df.tail(10),sep='\n')     # head N nos., where N is user input
 print("Information about dataset: -")
-data_info = df.info()                            # describle dataset
+data_info = df.info()                            # describle type of dataset data used
+count_null = df.isnull().sum()					 # count null values per column
+desc_dataset = df.describe()					 # perform different function

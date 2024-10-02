@@ -1,3 +1,5 @@
+Pandas (Known as Pannel Data)
+
 import pandas as pd
 
 # Series -> It is one dimensional array holding data of any type.
@@ -40,4 +42,4 @@ print("Head N nos.: -",df.head(10),sep='\n')     # head N nos., where N is user 
 print("Tail Bydefault: -",df.tail(),sep='\n')    # head bydefault retrive data of bottom 5 rows
 print("Tail N nos.: -",df.tail(10),sep='\n')     # head N nos., where N is user input
 print("Information about dataset: -")
-df.info()
+data_info = df.info()                            # describle dataset

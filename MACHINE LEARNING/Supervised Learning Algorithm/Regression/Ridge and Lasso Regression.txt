@@ -1,2 +1,8 @@
-Aim: This regression model is to handle overfitting of linear regression model
+Aim: This regression model is to handle overfitting of linear regression model with resepect to trained data
 
+Overfitting model	-> high accuracy on training dataset and low accuracy on test dataset.
+Underfitting model	-> low accuracy on training dataset and low accracy on test dataset.
+Generalised model	-> high accuracy on training dataset and low accuracy on test dataset.
+
+Ridge Regression: -
+----------------

@@ -1,7 +1,80 @@
-Aim: This regression model is to handle overfitting of linear regression model with resepect to trained data
+Aim: This regression model is to handle overfitting condition of linear regression model with resepect to trained data
 
 Overfitting model	-> high accuracy on training dataset and low accuracy on test dataset.
 Underfitting model	-> low accuracy on training dataset and low accracy on test dataset.
 Generalised model	-> high accuracy on training dataset and low accuracy on test dataset.
 
-Ridge Regression (L2 Regularisation): ((h_theta(x_i) - y_i) ** 2) + lambda*(slope ** 2)
+Ridge Regression (L2 Regularisation): ((theta_h(x_i) - y_i) ** 2) + lambda * (slope ^ 2)
+Lasso Regression (L1 Regularisation): ((theta_h(x_i) - y_i) ** 2) + lambda * | slope |
+
+Ridge Regression Implementation: -
+import pandas as pd
+import numpy as np
+from sklearn.datasets import load_diabetes
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import Ridge
+from sklearn.model_selection import GridSearchCV
+
+# Load datasets
+df = load_diabetes()
+dataset = pd.DataFrame(df.data)
+# Breaking into dependent variables and independent variables
+X = dataset		# Dependent features
+y = df.target	# Independent features
+
+# Performing train test split
+X_train, X_test, y_train, y_test = train_split(X, y, test_size=0.3, random_state=42)
+
+# Standardising datasets
+sclr = StandardScaler()
+X_train = sclr.fit_transform(X_train)
+X_test = sclr.transform(X_test)
+
+# Model training
+mdl = Ridge()
+param = {'alpha':[1,2,5,10,20,30,40,50]}
+ridgecv = GridSearchCV(mdl, param, scoring='neg_mean_squared_error', cv=5)
+ridgecv.fit(X_train,y_train)
+best_param = ridgecv.best_params_
+mdl_predict = ridgecv.predict(X_test)
+
+# Visualising
+import seaborn as sns
+sns.displot(mdl_predicit - y_test, kind=kde)
+
+Lasso Regression Implementation: -
+import pandas as pd
+import numpy as np
+from sklearn.datasets import load_diabetes
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import Lasso
+from sklearn.model_selection import GridSearchCV
+
+# Load datasets
+df = load_diabetes()
+dataset = pd.DataFrame(df.data)
+# Breaking into dependent variables and independent variables
+X = dataset		# Dependent features
+y = df.target	# Independent features
+
+# Performing train test split
+X_train, X_test, y_train, y_test = train_split(X, y, test_size=0.3, random_state=42)
+
+# Standardising datasets
+sclr = StandardScaler()
+X_train = sclr.fit_transform(X_train)
+X_test = sclr.transform(X_test)
+
+# Model training
+mdl = Lasso()
+param = {'alpha':[1,2,5,10,20,30,40,50]}
+mdlcv = GridSearchCV(mdl, param, scoring='neg_mean_squared_error', cv=5)
+mdlcv.fit(X_train,y_train)
+best_param = mdlcv.best_params_
+mdl_predict = mdlcv.predict(X_test)
+
+# Visualising
+import seaborn as sns
+sns.displot(mdl_predicit - y_test, kind=kde)

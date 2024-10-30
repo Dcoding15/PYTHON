@@ -19,7 +19,7 @@ theta_h(x) = theta_0 + theta_1*x_1 + ... +  theta_n*x_n
                                          theta_1, ... , theta_n -> slope of regression line
                                          x_1, ... , x_n         -> independent variables
 
-Cost Function or Squared Error Function: -
+Cost Function or Mean Squared Error: -
 J(theta_0,theta_1) = 1/(2*i) summation(theta_h(x_i) - y_i)^2
                                                              where, m -> no. of datapoints
                                                                     i -> starts from 0 to m

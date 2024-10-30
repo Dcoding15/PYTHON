@@ -1,7 +1,12 @@
 # Simple Linear Regression
 
+Residual Error -> Distance between predicted point and actual point.
+Best-fit line  -> Summation of all residual error, which ever is lower.
+
+Aim: To find best-fit line 
+
 Linear Regression Function: -
-Regression Line Slope: -
+Regression Line Slope or best-fit line: -
 y = m*x + c
             where, y -> predictated value or dependent variable
                    m -> slope or coefficient
@@ -23,3 +28,40 @@ Convergence Theorem: -
 theta_j := theta_j - lamda(derivative of theta_j(J(theta_0,theta_1))
                                                                     where, theta_j -> theta object which is minima of gradient descent
                                                                            lamda   -> learning rate which is best at low value
+
+
+Practical Implementation: -
+import pandas as pd
+import numpy as np
+from sklearn.datasets import load_diabetes
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LinearRegression
+df = load_diabetes()
+dataset = pd.DataFrame(df.data)
+# Breaking into dependent variables and independent variables
+X = dataset		# Dependent features
+y = df.target	# Independent features
+
+# Performing train test split
+X_train, X_test, y_train, y_test = train_split(X, y, test_size=0.3, random_state=42)
+
+# Standardising datasets
+sclr = StandardScaler()
+X_train = sclr.fit_transform(X_train)
+X_test = sclr.transform(X_test)
+
+# Model training
+mdl = LinearRegression()
+mdl.fit(X_train,y_train)
+mdl_predict = mdl.predict(X_test)
+
+# Cross validataion
+from sklearn.model_selection import cross_val_score
+mse = cross_val_score(mdl, X_train, X_test, scoring='ned_mean_squared_error', cv=5)
+np.mean(mse)
+#Note: The more less value of mean the better
+
+# Visualising
+import seaborn as sns
+sns.displot(mdl_predicit - y_test, kind=kde)

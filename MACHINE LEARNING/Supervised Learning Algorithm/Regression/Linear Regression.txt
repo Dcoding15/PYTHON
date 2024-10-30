@@ -1,6 +1,5 @@
 # Simple Linear Regression
 
-'''
 Linear Regression Function: -
 Regression Line Slope: -
 y = m*x + c
@@ -24,4 +23,3 @@ Convergence Theorem: -
 theta_j := theta_j - lamda(derivative of theta_j(J(theta_0,theta_1))
                                                                     where, theta_j -> theta object which is minima of gradient descent
                                                                            lamda   -> learning rate which is best at low value
-'''

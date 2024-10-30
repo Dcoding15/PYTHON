@@ -4,5 +4,4 @@ Overfitting model	-> high accuracy on training dataset and low accuracy on test 
 Underfitting model	-> low accuracy on training dataset and low accracy on test dataset.
 Generalised model	-> high accuracy on training dataset and low accuracy on test dataset.
 
-Ridge Regression: -
-----------------
+Ridge Regression (L2 Regularisation): ((h_theta(x_i) - y_i) ** 2) + lambda*(slope ** 2)

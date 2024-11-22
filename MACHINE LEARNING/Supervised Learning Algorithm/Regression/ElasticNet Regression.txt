@@ -1,3 +1,3 @@
 Aim: To reduce overfitting and reduce feature selection
 
-Cost Function = ((1/2*m)summation(theta_h(x_i) - y_i) ** 2) + lambda * (slope ^ 2) + lambda * | slope |
+ElasticNet = ((1/2*m)summation(theta_h(x_i) - y_i) ** 2) + lambda * (slope ^ 2) + lambda * | slope |

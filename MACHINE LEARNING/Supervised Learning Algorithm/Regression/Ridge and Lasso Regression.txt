@@ -4,8 +4,8 @@ Overfitting model	-> high accuracy on training dataset and low accuracy on test 
 Underfitting model	-> low accuracy on training dataset and low accracy on test dataset.
 Generalised model	-> high accuracy on training dataset and low accuracy on test dataset.
 
-Ridge Regression (L2 Regularisation): ((theta_h(x_i) - y_i) ** 2) + lambda * (slope ^ 2)
-Lasso Regression (L1 Regularisation): ((theta_h(x_i) - y_i) ** 2) + lambda * | slope |
+Ridge Regression (L2 Regularisation): ((1/2*m)summation(theta_h(x_i) - y_i) ** 2) + lambda * (slope ^ 2)
+Lasso Regression (L1 Regularisation): ((1/2*m)summation(theta_h(x_i) - y_i) ** 2) + lambda * | slope |
 
 Ridge Regression Implementation: -
 import pandas as pd

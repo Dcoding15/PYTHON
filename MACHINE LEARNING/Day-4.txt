@@ -11,15 +11,7 @@ Feature Enginnering: -
 Feature Scaling: -
 ---------------
     1. It is a technique to standardise the independent features present in the data in a fixed range.
-    2. There are two of feature scaling: -
-        a. Standardisation (z-score normalisation): -
-            x' = ( x[i] - mean(x) ) / standard_deviation(x)
-            where, x is numerical column of a data set
-            Range: -1 to 1
-        b. Normalisation: -
-            xi' = (xi - min(x)) / (max(x) - min(x))
-            where, x is numerical column of a data set
-            Range: 0 to 1
+            
 
 Types of Encoding: -
 -----------------
@@ -27,6 +19,7 @@ Types of Encoding: -
         a. One Hot Encoding
         b. One Hot Encoding with many categories
         c. Mean Encoding
+        d. Count of Frequency Encoding
     2. Ordinal Encoding (consider ranking data)
         a. Label Encoding
         b. Target Guided Ordinal Encoding
@@ -37,3 +30,47 @@ Handling Missing Values In Categorical Variable: -
     2. Replace with the most frequent values
     3. Apply classifier algorithm to predict (if any row has blank column then it will consider as test dataset)
     4. Apply unsupervised ML
+
+Types of Transformation: -
+-----------------------
+    1. Normalisation and Standardisation: -
+            from sklearn.preprocessing import StandardScaler
+            x' = ( x[i] - mean(x) ) / standard_deviation(x), Range: -1 to 1
+        Normalisation: -
+    2. Scaling to Minimum and Maximum value: -
+            from sklean.preprocessing import MinMaxScaler
+            x' = (x[i] - min(x)) / (max(x) - min(x)), Range: 0 to 1
+    3. Scaling to Median and Qualities: -
+            from sklearn.preprocessing import RobustScaler
+            x' = (x - median(x)) / (75th_quantile - 25th_quantile)
+    4. Guassian Transformation: -
+            First check whether feature is gaussian or normal distribution using Q-Q plot.
+    5. Logarithmic Transformation: -
+            import numpy as np
+            new_feature_column = np.log(old_feature_column)
+    6. Reciprocal Transformation: -
+            new_feature_column = 1/old_feature_column
+    7. Square root Transformation: -
+            new_feature_column = old_feature_column**(1/2)
+    8. Exponential Transformation: -
+            new_feature_column = old_feature_column**(1/1.2)
+    9. Box Cox Transformation: -
+            T(Y) = (Y exp(lambda) - 1)/lambda
+            Y is response variable
+            lambda is transform parameters which varies from -5 to 5
+
+            from scipy.stats import stat
+            new_feature_column,parameters = stat.boxcox(old_feature_column)
+    10. Fare Transformation: -
+            import numpy as np
+            new_feature_column = np.log1p(old_feature_column)
+
+from sklearn.model_selection import train_test_split
+from sklean.preprocessing import [name_of_feature_transformation]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random=10)
+scaler = [name_of_feature_transformation]()
+x_train_scaled = scaler.fit_transform(X_train)
+x_test_scaled = scaler.transform(X_test)
+Note: -
+    X is independent feature
+    y is dependent feature

@@ -30,3 +30,10 @@ Types of Encoding: -
     2. Ordinal Encoding (consider ranking data)
         a. Label Encoding
         b. Target Guided Ordinal Encoding
+
+Handling Missing Values In Categorical Variable: -
+-----------------------------------------------
+    1. Delete the rows
+    2. Replace with the most frequent values
+    3. Apply classifier algorithm to predict (if any row has blank column then it will consider as test dataset)
+    4. Apply unsupervised ML

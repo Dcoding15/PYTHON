@@ -1,17 +1,23 @@
 Feature Enginnering: -
 -------------------
-    1. The process of using domain knowledge to extract features from raw data.
-    2. It is used to improve machine learning algorithm.
-    3. Types of feature enginnering: -
-        a. Feature Transformation - missing values impuation, handling categorical features, outlier detection, feature scaling
-        b. Feature Construction
-        c. Feature Selection
-        d. Feature Extraction
+    1. EDA (Expolatory Data Analysis).
+        a. If numerical feature may be there, then use plots.
+        b. If categorical feature may be there, then group those different categories.
+        c. If there are any missing values using plots.
+        d. If there are any outliers use boxplot.
+        e. Whether raw data needs cleaning.
+    2. Handling the missing values.
+        a. Mean
+        b. Median
+        c. Mode
+    3. Handling Imbalanced dataset.
+    4. Treating the outliers.
+    5. Scaling the data (transformation).
+    6. Converting the categoriacal feature into numerical feature.
 
 Feature Scaling: -
 ---------------
     1. It is a technique to standardise the independent features present in the data in a fixed range.
-            
 
 Types of Encoding: -
 -----------------
@@ -43,6 +49,17 @@ Types of Transformation: -
     3. Scaling to Median and Qualities: -
             from sklearn.preprocessing import RobustScaler
             x' = (x - median(x)) / (75th_quantile - 25th_quantile)
+    
+    from skle`arn.model_selection import train_test_split
+    from sklean.preprocessing import [name_of_feature_transformation]
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random=10)
+    scaler = [name_of_feature_transformation]()
+    x_train_scaled = scaler.fit_transform(X_train)
+    x_test_scaled = scaler.transform(X_test)
+    Note: -
+        X is independent feature
+        y is dependent feature
+
     4. Guassian Transformation: -
             First check whether feature is gaussian or normal distribution using Q-Q plot.
     5. Logarithmic Transformation: -
@@ -64,13 +81,3 @@ Types of Transformation: -
     10. Fare Transformation: -
             import numpy as np
             new_feature_column = np.log1p(old_feature_column)
-
-from sklearn.model_selection import train_test_split
-from sklean.preprocessing import [name_of_feature_transformation]
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random=10)
-scaler = [name_of_feature_transformation]()
-x_train_scaled = scaler.fit_transform(X_train)
-x_test_scaled = scaler.transform(X_test)
-Note: -
-    X is independent feature
-    y is dependent feature

@@ -21,11 +21,12 @@ Feature Scaling: -
             where, x is numerical column of a data set
             Range: 0 to 1
 
-Encode Categorical Data: -
------------------------
-    1. Type of categorical data: -
-        a. Nominal Data ( no relationship between data )
-        b. Ordinal Data ( relationship between data )
-    2. Types of categorical encoding: -
-        a. Ordinal Encoding (for ordinal data) (use OrdinalEncoder or LabelEncoder)
-        b. One hot Encoding (for nominal data)
+Types of Encoding: -
+-----------------
+    1. Nominal Encoding (consider numerical data)
+        a. One Hot Encoding
+        b. One Hot Encoding with many categories
+        c. Mean Encoding
+    2. Ordinal Encoding (consider ranking data)
+        a. Label Encoding
+        b. Target Guided Ordinal Encoding

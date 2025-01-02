@@ -3,7 +3,6 @@ EDA using Universal Analysis (This is only for single column analysis): -
 1. Categorical Data
     a. Count Plot
     b. Pie Chart
-
 2. Numerical Data
     a. Histogram
     b. Distplot

@@ -2,8 +2,8 @@ Data Types: -
 ----------
     1. There are three types of main categories: -
         a. Numerical - there are two types of numerical categories
-            i) Discreate Data
-            ii) Continuous Data
+            i. Discreate Data
+            ii. Continuous Data
         b. Categorial - values can't be measured up against each other.
         c. Ordinal - values can be measured up against each other.
     2. Mean - Average value

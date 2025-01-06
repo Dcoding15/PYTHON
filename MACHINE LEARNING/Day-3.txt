@@ -43,3 +43,17 @@ for i in range(len(corr_matrix.columns)):
 
 ==============================================================================================================
 
+How to 
+import pandas as pd
+df = pd.read_csv("https://gist.githubusercontent.com/tijptjik/9408623/raw/b237fa5848349a14a14e5d4107dc7897c21951f5/wine.csv")
+y = df["Wine"]
+X = df.drop("Wine",axis=1)
+
+from sklearn.model_selection import train_test_split
+from sklearn.feature_selection import mutual_info_classif, SelectKBest
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+
+mutual_classification_info = mutual_info_classif(X_train, y_train)
+mutual_classification_info = pd.Series(mutual_classification_info)
+mutual_classification_info.index = X_train.columns
+

@@ -3,6 +3,7 @@ Feature Selection: -
 
 How to drop constant features using variance threshold ?
 import pandas as pd
+from sklearn.feature_selection import VarianceThreshold
 df = pd.DataFrame(
     {
         "A":[1,2,4,1,2,4],
@@ -11,3 +12,34 @@ df = pd.DataFrame(
         "D":[1,1,1,1,1,1],
     }
 )
+low_variance = VarianceThreshold(threshold=0)
+low_variance.fit(df)
+constant_feature_columns = [i for i in df.columns if i not in df.columns[low_variance.get_support()]]
+df.drop(constant_feature_columns,axis=1)
+
+==============================================================================================================
+
+How to drop high correlated independent features using Pearson Correlation ?
+import pandas as pd
+from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
+import seaborn as sns
+df = pd.DataFrame()
+y = df.loc[""]
+X = df.drop("dependent feature name",axis=1)
+X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.3,random_state=0)
+correlation = X_train.corr()
+sns.heatmap(correlation,annot=True,cmap=plt.cm.CMRmap_r)
+plt.show()
+
+threshold = 0
+col_corr = set()  # Set of all the names of correlated columns
+corr_matrix = df.corr()
+for i in range(len(corr_matrix.columns)):
+     for j in range(i):
+          if abs(corr_matrix.iloc[i, j]) > threshold: # we are interested in absolute coeff value
+            colname = corr_matrix.columns[i]  # getting the name of column
+            col_corr.add(colname)
+
+==============================================================================================================
+

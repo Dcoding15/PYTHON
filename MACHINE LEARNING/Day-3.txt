@@ -43,7 +43,7 @@ for i in range(len(corr_matrix.columns)):
 
 ==============================================================================================================
 
-How to 
+How to select most highly dependent features for classification problems ?
 import pandas as pd
 df = pd.read_csv("https://gist.githubusercontent.com/tijptjik/9408623/raw/b237fa5848349a14a14e5d4107dc7897c21951f5/wine.csv")
 y = df["Wine"]
@@ -57,3 +57,16 @@ mutual_classification_info = mutual_info_classif(X_train, y_train)
 mutual_classification_info = pd.Series(mutual_classification_info)
 mutual_classification_info.index = X_train.columns
 
+mutual_classification_info.sort_values(ascending=False).plot.bar()
+
+select_8_best = SelectKBest(mutual_info_classif, k=8)
+select_8_best.fit(X_train, y_train)
+
+X_train.columns[select_8_best.get_support()]
+
+==============================================================================================================
+
+How to select most highly dependent featues for regression problems ?
+
+
+==============================================================================================================

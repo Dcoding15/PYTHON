@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<script>
+    $('document').ready(function (){
+        function result() {
+            let value = $("#temp").val();
+            if (isNaN(value) || value === '') {
+                $("#result").text("Please enter a valid number").show();
+                return;
+            }
+
+            value = parseFloat(value);
+            let f, c;
+
+            if ($("#c").prop("checked")) {
+                f = (9/5) * value + 32;
+                $("#result").text(`${value}°C is ${f}°F`).show();
+            } else if ($("#f").prop("checked")) {
+                c = (5 * (value - 32)) / 9;
+                $("#result").text(`${value}°F is ${c}°C`).show();
+            } else {
+                $("#result").text("Please select a conversion type").show();
+            }
+        }
+
+        $("#heading").keyup(function() {
+            result();
+        });
+
+        $("input[name='temp']").change(function() {
+            result();
+        });
+    })
+      
+</script>
+<body>
+    <input type="text" id="temp" placeholder="Enter the Temperature "><br>
+    <input type="radio" id="f" name="temp">Fahrenheit to Celsius
+    <input type="radio" id="c" name="temp">Celsius to Fahrenheit
+    <h1 id="heading"></h1>
+    <h1 id="result"></h1>
+</body>
+</html>

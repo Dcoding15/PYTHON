@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+          body {
+            display: flex;
+            justify-content: center;
+            margin: 12% 0% 12%;
+          }
+
+          #cal_container {
+                display: grid;
+                width: 348px;
+                height: 457px;
+                border: 2px solid white;
+                border-radius: 20px;
+                background-color: gray;
+            }
+
+            #cal_screen {
+                width: 300px;
+                height: 70px;
+                border: 2px solid white;
+                border-radius: 20px;
+                margin: 21px -238px 21px 16px;
+                text-align: right;
+                font-weight: bold;
+                font-size: 60px;
+            }
+
+            .cal_btn {
+                width: 64px;
+                height: 64px;
+                border: 2px solid white;
+                border-radius: 20px;
+                margin: -1px 2px 15px 12px;
+                text-align: center;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="cal_container">
+            <form name="calc">
+                <tr>
+                    <td>
+                        <input type="text" id="cal_screen">
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="7" placeholder="7" class="cal_btn" onclick="calc.cal_screen.value+='7'"></td>
+                    <td><input type="button" value="8" placeholder="8" class="cal_btn" onclick="calc.cal_screen.value+='8'"></td>
+                    <td><input type="button" value="9" placeholder="9" class="cal_btn" onclick="calc.cal_screen.value+='9'"></td>
+                    <td><input type="button" value="+" placeholder="+" class="cal_btn" onclick="calc.cal_screen.value+='+'"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="4" placeholder="4" class="cal_btn" onclick="calc.cal_screen.value+='4'"></td>
+                    <td><input type="button" value="5" placeholder="5" class="cal_btn" onclick="calc.cal_screen.value+='5'"></td>
+                    <td><input type="button" value="6" placeholder="6" class="cal_btn" onclick="calc.cal_screen.value+='6'"></td>
+                    <td><input type="button" value="-" placeholder="-" class="cal_btn" onclick="calc.cal_screen.value+='-'"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="1" placeholder="1" class="cal_btn" onclick="calc.cal_screen.value+='1'"></td>
+                    <td><input type="button" value="2" placeholder="2" class="cal_btn" onclick="calc.cal_screen.value+='2'"></td>
+                    <td><input type="button" value="3" placeholder="3" class="cal_btn" onclick="calc.cal_screen.value+='3'"></td>
+                    <td><input type="button" value="X" placeholder="X" class="cal_btn" onclick="calc.cal_screen.value+='*'"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="C" placeholder="C" class="cal_btn" onclick="calc.cal_screen.value=''"></td>
+                    <td><input type="button" value="0" placeholder="0" class="cal_btn" onclick="calc.cal_screen.value+='0'"></td>
+                    <td><input type="button" value="=" placeholder="=" class="cal_btn" onclick="calc.cal_screen.value=eval(calc.cal_screen.value)"></td>
+                    <td><input type="button" value="/" placeholder="/" class="cal_btn" onclick="calc.cal_screen.value+='/'"></td>
+                </tr>
+            </form>
+        </table>
+    </body>
+</html>

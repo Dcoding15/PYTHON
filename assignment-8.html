@@ -1,0 +1,58 @@
+<html>
+    <body>
+        <div id="quallist"></div>
+        <h2>Add new qualification</h2>
+        <input type="text" id="degree" placeholder="Enter your degree">
+        <input type="text" id="field" placeholder="Enter your field">
+        <input type="text" id="institution" placeholder="Enter your name of institution">
+        <input type="number" id="year" placeholder="Enter year of completion">
+        <button id="qualification">ADD</button>
+    </body>
+    <script>
+        const person = {
+            name:'Bappu Das',
+            age:30,
+            qualifications:[
+                {
+                    degree:'BCA',
+                    field:'CS',
+                    institution:'BWU',
+                    year:2024
+                },
+                {
+                    degree:'HS',
+                    field:'SC',
+                    institution:'ABC',
+                    year:2021
+                }
+            ]
+        }
+
+        displayQualification();
+        function displayQualification(){
+            const qualificationList = document.getElementById('quallist');
+            qualificationList.innerHTML = '';
+            person.qualifications.forEach(qual => {
+                const qualificationItem = document.createElement('div');
+                qualificationItem.innerHTML = `${qual.degree} degree in ${qual.field} from ${qual.institution} institution  on ${qual.year} year`
+                qualificationList.appendChild(qualificationItem); 
+                
+            });
+        }
+        document.getElementById('qualification').addEventListener("click",function() {
+            const degree = document.getElementById("degree").value;
+            const field = document.getElementById("field").value;
+            const institution = document.getElementById("institution").value;
+            const year = document.getElementById("year").value;
+            if (degree && field && institution && year) {
+                person.qualifications.push({
+                    degree:degree,
+                    field:field,
+                    institution:institution,
+                    year:year
+                })
+                displayQualification();
+            }
+        });
+    </script>
+</html>

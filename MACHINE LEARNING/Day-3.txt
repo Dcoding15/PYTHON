@@ -92,3 +92,36 @@ X_train.columns[select_percentile.get_support()]
 
 How to select most highly dependent features using Chi2 test ?
 # Before appling Chi2 test we have to perform label encoding on each columns
+import pandas as pd
+
+raw_data = {
+    'sex':['male','female','female','female','male'],
+    'embarked':['S','C','S','S','S'],
+    'alone':['False','False','True','False','True'],
+    'pclass':[3,1,3,1,3],
+    'survived':[0,1,1,1,0]
+}
+
+df = pd.DataFrame(raw_data)
+
+import numpy as np
+ord_label_1 = {k:i for i,k in enumerate(df['sex'].unique())}
+ord_label_2 = {k:i for i,k in enumerate(df['embarked'].unique())}
+ord_label_3 = {k:i for i,k in enumerate(df['alone'].unique())}
+
+df['sex'] = df['sex'].map(ord_label_1)
+df['embarked'] = df['embarked'].map(ord_label_2)
+df['alone'] = df['alone'].map(ord_label_3)
+
+from sklearn.model_selection import train_test_split
+output_feature = 'survived'
+y = df[output_feature]
+X = df.drop(output_feature, axis=1)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+
+from sklearn.feature_selection import chi2
+# chi2 return two values fscore and pvalue
+chi2_value = chi2(X_train, y_train)
+chi2_value = pd.Series(chi2_value[1])
+chi2_value.index = X_train.columns
+print(chi2_value.sort_values(ascending=False))

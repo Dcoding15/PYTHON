@@ -44,6 +44,7 @@ for i in range(len(corr_matrix.columns)):
 ==============================================================================================================
 
 How to select most highly dependent features for classification problems ?
+# It estimate mutual information for a discreate target variable.
 import pandas as pd
 df = pd.read_csv("https://gist.githubusercontent.com/tijptjik/9408623/raw/b237fa5848349a14a14e5d4107dc7897c21951f5/wine.csv")
 y = df["Wine"]
@@ -67,6 +68,27 @@ X_train.columns[select_8_best.get_support()]
 ==============================================================================================================
 
 How to select most highly dependent featues for regression problems ?
+# It estimate mutual information for a continuous target variable.
+import pandas as pd
+df = pd.read_csv()
+y = df[""]
+X = df.drop(y,axis=1)
 
+from sklearn.model_selection import train_test_split
+from sklearn.feature_selection import mutual_info_regression, SelectPercentile
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+mutual_regression = mutual_info_regression(X_train.fillna(0), y_train)
+mutual_regression_info = pd.Series(mutual_regression_info)
+mutual_regression_info.index = X_train.columns
+
+mutual_regression_info.sort_values(asending=False).plot.bar()
+
+select_percentile = SelectPercentile(mutual_info_regression, percentile=)
+select_percentile.fit(X_train, y_train)
+
+X_train.columns[select_percentile.get_support()]
 
 ==============================================================================================================
+
+How to select most highly dependent features using Chi2 test ?
+# Before appling Chi2 test we have to perform label encoding on each columns

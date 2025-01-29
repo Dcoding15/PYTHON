@@ -6,3 +6,4 @@ Statistics: It is a discipline that concerns the collection, organisation, analy
     c. Measure of Central Tendency i.e. Mean, Median, Mode
     d. Measure of Variance
   2. Infernal Statistics
+    a. Taking sample from entire population, then we try to do some test and we make a decision of against that sample data.

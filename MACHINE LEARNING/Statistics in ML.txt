@@ -1,13 +1,13 @@
 Statistics: It is a discipline that concerns the collection, organisation, analysis, interpretation and presentation of data.
 2 types of statistics: -
-  1. Descriptive Statistics
-    a. Analyzing, summarizing, organizing data in the form of number and graph
-    b. Bar plot, Histogram, Pie chart, PDF (Probability Density Function), CDF (Cumulative Density Function)
-    c. Measure of Central Tendency i.e. Mean, Median, Mode
-    d. Measure of Variance
-  2. Infernal Statistics
-    a. Taking sample from entire population, then we try to do some test and we make a decision of against that sample data.
-	b. Test like Z Test, T Test, Chi2 Test, etc.
+	1. Descriptive Statistics
+		a. Analyzing, summarizing, organizing data in the form of number and graph
+    	b. Bar plot, Histogram, Pie chart, PDF (Probability Density Function), CDF (Cumulative Density Function)
+		c. Measure of Central Tendency i.e. Mean, Median, Mode
+		d. Measure of Variance
+	2. Infernal Statistics
+		a. Taking sample from entire population, then we try to do some test and we make a decision of against that sample data.
+		b. Test like Z Test, T Test, Chi2 Test, etc.
 
 Population vs Sample: -
 	1. Population (A group of thing share a common characteristics)
@@ -16,4 +16,9 @@ Population vs Sample: -
 		a. Discreate Random Variable (variable takes finite no. of values)
 		b. Continuous Random Variable (varialble takes infinite no. of values within a given interval)
 	4. Gaussian Distribution / Normal Distribution
-		gaussian_distribution(mean(x), standard_deviation(x)) 
+		a. gaussian_distribution(mean(x), standard_deviation(x))
+		b. It will form bell curve graph as output. The highest point refers to mean of the dataset.
+		c. Empirical rule also know as 68-95-99.7 rule or 3 sigma rule. It is used to calculate the percentage of data that falls within a certain number of standard deviations from the mean.
+			i. 68% for mean(x) - standard_deviation(x) <= x <= mean(x) + standard_deviation(x)
+			ii. 95% for mean(x) - 2*standard_deviation(x) <= x <= mean(x) + 3*standard_deviation(x)
+			iii. 99.7% for mean(x) - 3*standard_deviation(x) <= x <= mean(x) + 3*standard_deviation(x)

@@ -7,3 +7,13 @@ Statistics: It is a discipline that concerns the collection, organisation, analy
     d. Measure of Variance
   2. Infernal Statistics
     a. Taking sample from entire population, then we try to do some test and we make a decision of against that sample data.
+	b. Test like Z Test, T Test, Chi2 Test, etc.
+
+Population vs Sample: -
+	1. Population (A group of thing share a common characteristics)
+	2. Sample (Part of some population)
+	3. Random Variable
+		a. Discreate Random Variable (variable takes finite no. of values)
+		b. Continuous Random Variable (varialble takes infinite no. of values within a given interval)
+	4. Gaussian Distribution / Normal Distribution
+		gaussian_distribution(mean(x), standard_deviation(x)) 

@@ -7,7 +7,7 @@ Statistics: It is a discipline that concerns the collection, organisation, analy
 		d. Measure of Variance
 	2. Infernal Statistics
 		a. Taking sample from entire population, then we try to do some test and we make a decision of against that sample data.
-		b. Test like Z Test, T Test, Chi2 Test, etc.
+		b. Tests like Z Test, T Test, Chi2 Test, etc.
 
 Population vs Sample: -
 	1. Population (A group of thing share a common characteristics)
@@ -22,3 +22,11 @@ Population vs Sample: -
 			i. 68% for mean(x) - standard_deviation(x) <= x <= mean(x) + standard_deviation(x)
 			ii. 95% for mean(x) - 2*standard_deviation(x) <= x <= mean(x) + 3*standard_deviation(x)
 			iii. 99.7% for mean(x) - 3*standard_deviation(x) <= x <= mean(x) + 3*standard_deviation(x)
+	5. Log Normal Distribution
+		a. log(x) ~ gaussian_distribution(mean(x), standard_deviation(x))
+		b. It will form right-skewed curve graph as output.
+
+Covariance: -
+	1. Quantifying the relation between features.
+	2. covariance(x, y) = 1/n summation((x_i - mean_x) * (y_i - mean_y))
+	3. covariance(x, x) = variance(x)
